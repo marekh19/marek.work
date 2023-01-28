@@ -6,7 +6,7 @@ type Props = {
 }
 
 export const Section: FC<Props> = ({ heading, children }) => (
-  <section className="mt-5">
+  <section className="mt-8">
     <h3 className="mb-2 inline-block border-b-4 border-gray-400 text-2xl dark:border-gray-600">
       {heading}
     </h3>

@@ -16,7 +16,7 @@ export const Introduction: FC = () => (
         title="Marek Honzal"
         fill
         sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
-        className="rounded-full border-2 border-indigo-300 dark:border-gray-50"
+        className="rounded-full border-2 border-gray-900 dark:border-gray-50"
       />
     </div>
   </div>
