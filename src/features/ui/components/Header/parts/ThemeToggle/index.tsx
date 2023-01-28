@@ -17,7 +17,7 @@ export const ToggleTheme: FC = () => {
   if (currentTheme === 'dark') {
     return (
       <SunIcon
-        className="w-10 h-10 text-yellow-500"
+        className="h-8 w-8 text-yellow-500 transition duration-300 ease-in-out hover:text-orange-400"
         role="button"
         onClick={() => setTheme('light')}
       />
@@ -25,7 +25,7 @@ export const ToggleTheme: FC = () => {
   }
   return (
     <MoonIcon
-      className="w-10 h-10 text-gray-900 "
+      className="h-8 w-8 text-gray-700 transition duration-300 ease-in-out hover:text-yellow-500"
       role="button"
       onClick={() => setTheme('dark')}
     />

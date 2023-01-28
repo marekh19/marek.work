@@ -8,11 +8,11 @@
   }
 
   body {
-    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50;
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50;
     @apply min-h-screen;
   }
 
   ::selection {
-    @apply text-white bg-indigo-500;
+    @apply bg-indigo-500 text-white;
   }
 }
