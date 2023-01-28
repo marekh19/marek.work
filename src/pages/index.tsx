@@ -1,3 +1,1 @@
-export default function Home() {
-  return <h1 className="text-5xl">Hello</h1>
-}
+export { Home as default } from '~/features/home/Page'
