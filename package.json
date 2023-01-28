@@ -28,8 +28,11 @@
     "@strv/eslint-config-react": "^4.2.0",
     "@strv/eslint-config-typescript": "^3.2.0",
     "@strv/prettier-config": "^2.0.0",
+    "autoprefixer": "^10.4.13",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3"
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.3",
+    "tailwindcss": "^3.2.4"
   }
 }
