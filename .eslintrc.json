@@ -5,6 +5,9 @@
     "@strv/typescript",
     "@strv/typescript/react"
   ],
+  "rules": {
+    "react/no-unknown-property": "off"
+  },
 
   "parserOptions": {
     "project": "./tsconfig.json"

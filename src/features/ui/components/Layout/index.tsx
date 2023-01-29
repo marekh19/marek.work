@@ -2,6 +2,7 @@ import type { FC, ReactNode } from 'react'
 
 import { Footer } from '../Footer'
 import { Header } from '../Header'
+import { ModelViewer } from '../Threejs/ModelViewer'
 
 type Props = {
   children: ReactNode
@@ -15,10 +16,13 @@ export const Layout: FC<Props> = ({ children, className }) => {
     >
       <Header />
 
-      <div className="flex items-center justify-between px-4 py-4 sm:px-6">
-        <div className="flex w-full flex-col items-center bg-gray-200 px-4 py-28 text-3xl dark:bg-gray-800 sm:px-6">
-          3D placeholder
-        </div>
+      <div className="relative m-auto mt-[-8rem] mb-[-10rem] h-[30rem] w-full">
+        <ModelViewer
+          modelPath="/keyboard.glb"
+          position={[0, 0, 0]}
+          scale={15}
+          rotation={[45, 0, 0]}
+        />
       </div>
 
       <main className="mx-auto w-full flex-grow px-4 sm:px-6">{children}</main>
