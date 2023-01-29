@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import type { FC } from 'react'
 
-import { Section } from '~/features/ui/components/Section'
+import { Section } from '@ui//Section'
+import { Button } from '@ui/Button'
 
 export const Work: FC = () => (
   <Section heading="Work">
@@ -37,12 +38,7 @@ export const Work: FC = () => (
     </p>
     <div className="text-center">
       <Link href="/projects">
-        <button
-          type="button"
-          className="mt-5 inline-block rounded bg-indigo-600 px-6 py-2.5 font-semibold text-gray-50 transition duration-300 ease-in-out hover:bg-indigo-300 hover:text-gray-800 dark:bg-indigo-400 dark:text-gray-900 dark:hover:bg-indigo-600 dark:hover:text-gray-50"
-        >
-          My Portfolio &gt;
-        </button>
+        <Button text="My portfolio" />
       </Link>
     </div>
   </Section>

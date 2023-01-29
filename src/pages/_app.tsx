@@ -1,10 +1,9 @@
 import '~/styles/globals.css'
 import { Inter } from '@next/font/google'
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 import { ThemeProvider } from 'next-themes'
 
-import { Layout } from '~/features/ui/components/Layout'
+import { HeadDefault } from '~/features/core/HeadDefault'
 
 const bodyFont = Inter({
   subsets: ['latin'],
@@ -14,14 +13,11 @@ const bodyFont = Inter({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>Marek Honzal - Homepage</title>
-      </Head>
-
+      <HeadDefault />
       <ThemeProvider enableSystem attribute="class">
-        <Layout className={`${bodyFont.variable} font-sans`}>
+        <div className={`${bodyFont.variable} font-sans`}>
           <Component {...pageProps} />
-        </Layout>
+        </div>
       </ThemeProvider>
     </>
   )

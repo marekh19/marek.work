@@ -6,7 +6,8 @@
     "@strv/typescript/react"
   ],
   "rules": {
-    "react/no-unknown-property": "off"
+    "react/no-unknown-property": "off",
+    "react/require-default-props": "off"
   },
 
   "parserOptions": {

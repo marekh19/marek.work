@@ -2,7 +2,7 @@ import Image from 'next/image'
 import type { FC } from 'react'
 
 export const Introduction: FC = () => (
-  <div className="relative z-50 mt-5 flex items-center justify-between">
+  <div className="relative mt-5 flex items-center justify-between">
     <div>
       <h1 className="text-2xl font-medium tracking-wide sm:text-4xl">
         Marek Honzal
