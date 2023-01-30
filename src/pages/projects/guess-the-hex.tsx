@@ -19,6 +19,7 @@ const GuessTheHexPage: FC = () => {
         year="2022"
         stack={stack}
         imagePaths={['/GuessTheHex/1.png']}
+        websiteUrl="https://guessthehex.marek.work"
         github={{
           name: 'GuessTheHex',
           url: 'https://github.com/marekh19/GuessTheHex',
