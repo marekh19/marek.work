@@ -17,23 +17,24 @@ export const Work: FC = () => (
       >
         Accenture
       </a>{' '}
-      by day and <span className="font-medium">React/Next.js</span> developer by
-      night. In my fulltime job I work on many different features like:
+      by day and a <span className="font-medium">React/Next.js</span> developer
+      by night. In my full-time job, I work on many different features e.g.:
     </p>
     <ul className="my-3 list-disc pl-4">
       <li className="my-1">
-        CRUD Rest API to query and mutate data from outside ServiceNow platform
+        CRUD Rest API to query and mutate data from outside the ServiceNow
+        platform
       </li>
       <li className="my-1">
         New frontend features for ServiceNow Portal in AngularJS
       </li>
       <li className="my-1">
-        Transform map for parsing csv data into ServiceNow database
+        Transform map for parsing csv data into the ServiceNow database
       </li>
     </ul>
     <p>
-      When it&apos;s dark outside I work on my own web apps to improve my skills
-      in technologies I&apos;m passionate about, like:{' '}
+      When it&apos;s dark outside I work on my web apps to improve my skills in
+      technologies I&apos;m passionate about, like{' '}
       <span className="font-medium">TypeScript, React, Next.js, Node.js</span>
     </p>
     <div className="text-center">

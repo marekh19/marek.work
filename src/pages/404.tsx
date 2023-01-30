@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import { Button } from '@ui/Button'
-import { DefaultLayout } from '~/features/ui/components/Layouts/DefaultLayout'
+import { DefaultLayout } from '@ui/Layouts/DefaultLayout'
 
 const NotFoundPage: NextPage = () => {
   return (
