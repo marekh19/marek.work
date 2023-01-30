@@ -7,7 +7,7 @@ import { LinkedInIcon } from './parts/LinkedInIcon'
 
 export const Links: FC = () => (
   <Section heading="On the web">
-    <div>
+    <>
       <a href="https://github.com/marekh19" target="_blank" rel="noreferrer">
         <button
           type="button"
@@ -30,6 +30,6 @@ export const Links: FC = () => (
           <span className="ml-2 font-semibold">Marek Honzal</span>
         </button>
       </a>
-    </div>
+    </>
   </Section>
 )

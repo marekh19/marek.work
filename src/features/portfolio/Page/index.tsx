@@ -12,7 +12,7 @@ export const Projects: FC = () => {
   return (
     <>
       <Head>
-        <title>Projects - Marek Honzal</title>
+        <title>Portfolio - Marek Honzal</title>
       </Head>
       <DefaultLayout>
         <Section heading="Projects" classNames="relative">
