@@ -12,9 +12,9 @@ export const Header: FC = () => (
         <Link href="/projects">
           <button
             type="button"
-            className="transition duration-300 ease-in-out hover:scale-105"
+            className="rounded-md border-2 border-gray-900 px-2 font-semibold tracking-wide transition duration-300 ease-in-out hover:bg-gray-900 hover:text-gray-50 dark:border-gray-50 dark:hover:bg-gray-50 dark:hover:text-gray-900"
           >
-            Projects
+            Portfolio
           </button>
         </Link>
       </nav>
