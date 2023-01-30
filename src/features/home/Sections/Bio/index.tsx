@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { Section } from '~/features/ui/components/Section'
+import { Section } from '@ui/Section'
 
 export const Bio: FC = () => (
   <Section heading="Bio">
@@ -53,7 +53,7 @@ export const Bio: FC = () => (
         </div>
         <div className="mt-0.5 ml-4 mb-2">
           <h4 className="mb-1.5 font-extralight text-gray-800 dark:text-gray-50">
-            Green Fox Academy bootcamp
+            Green Fox Academy bootcamp (5&nbsp;months&nbsp;full-time)
           </h4>
         </div>
       </li>
@@ -66,7 +66,7 @@ export const Bio: FC = () => (
         </div>
         <div className="mt-0.5 ml-4 mb-2">
           <h4 className="mb-1.5 font-extralight text-gray-800 dark:text-gray-50">
-            STRV Academy Frontend (3 months training)
+            STRV Academy Frontend (3&nbsp;months&nbsp;weekly&nbsp;training)
           </h4>
         </div>
       </li>

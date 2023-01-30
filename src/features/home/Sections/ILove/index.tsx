@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { FC } from 'react'
 
-import { Section } from '~/features/ui/components/Section'
+import { Section } from '@ui/Section'
 
 export const ILove: FC = () => (
   <Section heading="I ♥">

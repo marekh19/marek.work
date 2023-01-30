@@ -4,12 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { FC, ReactNode } from 'react'
 
-type Technology = {
+export type Technology = {
   name: string
   url: string
 }
 
-type Github = {
+export type Github = {
   name: string
   url: string
 }

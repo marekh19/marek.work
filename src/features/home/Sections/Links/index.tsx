@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { Section } from '~/features/ui/components/Section'
+import { Section } from '@ui/Section'
 
 import { GitHubIcon } from './parts/GitHubIcon'
 import { LinkedInIcon } from './parts/LinkedInIcon'

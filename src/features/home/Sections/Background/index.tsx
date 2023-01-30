@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { Section } from '~/features/ui/components/Section'
+import { Section } from '@ui/Section'
 
 export const Background: FC = () => (
   <Section heading="Background">
