@@ -26,7 +26,8 @@ const SNIncidentPage: FC = () => {
         }}
       >
         <p className="mb-3">
-          When Next.js 13 came out I wanted to try the new approach by using{' '}
+          When <span className="font-semibold">Next.js 13</span> came out I
+          wanted to try the new approach by using{' '}
           <a
             className="text-indigo-600 dark:text-indigo-400"
             href="https://nextjs.org/docs/advanced-features/custom-app"
@@ -36,11 +37,14 @@ const SNIncidentPage: FC = () => {
             app/
           </a>{' '}
           directory that is still in beta. I also wanted to show a couple of my
-          team colleagues some React introduction so I chose what we know very
-          well - ServiceNow platform as a data provider.
+          team colleagues some <span className="font-semibold">React</span>{' '}
+          introduction so I chose what we know very well -{' '}
+          <span className="font-semibold">ServiceNow</span> platform as a data
+          provider.
         </p>
         <p className="mb-3">
-          I learned how to work with /app directory in Next.js 13 and how to use{' '}
+          I learned how to work with <span className="font-semibold">/app</span>{' '}
+          directory in Next.js 13 and how to use{' '}
           <a
             className="text-indigo-600 dark:text-indigo-400"
             href="https://nextjs.org/docs/advanced-features/custom-app"

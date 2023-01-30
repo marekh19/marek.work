@@ -29,8 +29,11 @@ const CutestMonPage: FC = () => {
         }}
       >
         <p className="mb-3">
-          I wanted to learn more about connecting Next.js app to a database. So
-          I created a very similar app that Theo shows in his{' '}
+          I wanted to learn more about{' '}
+          <span className="font-semibold">
+            connecting Next.js app to a database
+          </span>
+          . So I created a very similar app that Theo shows in his{' '}
           <a
             className="text-indigo-600 dark:text-indigo-400"
             href="https://youtu.be/PKy2lYEnhgs"
@@ -43,8 +46,10 @@ const CutestMonPage: FC = () => {
           things differently to not just blindly follow a tutorial video.
         </p>
         <p className="mb-3">
-          I learned how to use SSG for the results page, tRPC, and interact with
-          a database through Prisma ORM.
+          I learned how to use <span className="font-semibold">SSG</span> for
+          the results page, <span className="font-semibold">tRPC</span>, and
+          interact with a database through{' '}
+          <span className="font-semibold">Prisma ORM</span>.
         </p>
       </ProjectDetailPage>
     </ProjectLayout>

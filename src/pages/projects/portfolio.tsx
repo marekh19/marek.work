@@ -30,12 +30,14 @@ const PortfolioPage: FC = () => {
           I felt it would be good to create a website where I can showcase
           projects I&apos;ve been working on in a well-arranged way. So other
           developers can see what I&apos;m working on and learn something about
-          me. I also wanted to try to bring a 3D object to a website with
-          Three.js and I think this was a perfect fit.
+          me. I also wanted to try to bring a 3D object to a website with{' '}
+          <span className="font-semibold">Three.js</span> and I think this was a
+          perfect fit.
         </p>
         <p>
-          I also wanted to practice little more with Tailwind CSS since I mostly
-          used styled-components before.
+          I also wanted to practice little more with{' '}
+          <span className="font-semibold">Tailwind CSS</span> since I mostly
+          used <span className="font-semibold">styled-components</span> before.
         </p>
       </ProjectDetailPage>
     </ProjectLayout>
