@@ -7,7 +7,7 @@ export const Introduction: FC = () => (
       <h1 className="text-2xl font-medium tracking-wide sm:text-4xl">
         Marek Honzal
       </h1>
-      <h2 className="font-light sm:text-lg">Full-stack web developer</h2>
+      <h2 className="font-light sm:text-lg">Frontend web developer</h2>
     </div>
     <div className="relative h-28 w-28">
       <Image
