@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { DefaultLayout } from '@ui/Layouts/DefaultLayout'
+import { InnerLayout } from '@ui/Layouts/InnerLayout'
 
 import { Introduction } from '../Introduction'
 import { Background } from '../Sections/Background'
@@ -11,7 +11,7 @@ import { Work } from '../Sections/Work'
 
 export const Home: FC = () => {
   return (
-    <DefaultLayout>
+    <InnerLayout>
       <cite className="mx-auto block w-5/6 rounded bg-gray-900 bg-opacity-10 py-3 text-center not-italic shadow-md backdrop-blur-lg dark:bg-gray-200 dark:bg-opacity-10 sm:w-3/4">
         Hi, I&apos;m a web developer based in the&nbsp;Czech&nbsp;Republic!
       </cite>
@@ -21,6 +21,6 @@ export const Home: FC = () => {
       <Bio />
       <ILove />
       <Links />
-    </DefaultLayout>
+    </InnerLayout>
   )
 }

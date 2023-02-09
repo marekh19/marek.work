@@ -17,7 +17,7 @@ export const GltfModel: FC<GltfProps> = ({
   // Subscribe this component to the render-loop, rotate the mesh every frame
   useFrame(() => {
     if (ref.current) {
-      ref.current.rotation.y += 0.003
+      ref.current.rotation.y -= 0.003
     }
   })
 

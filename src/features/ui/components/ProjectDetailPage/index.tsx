@@ -38,7 +38,7 @@ export const ProjectDetailPage: FC<Props> = ({
       <Head>
         <title>{`${name} - Marek Honzal`}</title>
       </Head>
-      <div className="mt-3">
+      <div className="z-50 pt-3 backdrop-blur-md">
         <div className="flex items-center">
           <Link
             href="/projects"
@@ -60,10 +60,9 @@ export const ProjectDetailPage: FC<Props> = ({
           </h3>
           <div className="ml-3">
             {stack.map((tech, index) => (
-              <>
+              <span key={`${tech.name}_${Math.random()}`}>
                 <a
                   className="text-indigo-600 dark:text-indigo-400"
-                  key={`${tech.name}_${Math.random()}`}
                   href={tech.url}
                   target="_blank"
                   rel="noreferrer"
@@ -71,7 +70,7 @@ export const ProjectDetailPage: FC<Props> = ({
                   {tech.name}
                 </a>
                 {index !== stack.length - 1 && <span>, </span>}
-              </>
+              </span>
             ))}
           </div>
         </div>

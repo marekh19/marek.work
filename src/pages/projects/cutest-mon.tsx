@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { ProjectLayout } from '@ui/Layouts/ProjectLayout'
+import { InnerLayout } from '@ui/Layouts/InnerLayout'
 import { ProjectDetailPage } from '@ui/ProjectDetailPage'
 import type { Technology } from '@ui/ProjectDetailPage'
 
@@ -16,7 +16,7 @@ const stack: Technology[] = [
 
 const CutestMonPage: FC = () => {
   return (
-    <ProjectLayout>
+    <InnerLayout>
       <ProjectDetailPage
         name="Cutest Pokémon"
         year="2022"
@@ -52,7 +52,7 @@ const CutestMonPage: FC = () => {
           <span className="font-semibold">Prisma ORM</span>.
         </p>
       </ProjectDetailPage>
-    </ProjectLayout>
+    </InnerLayout>
   )
 }
 

@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { ProjectLayout } from '@ui/Layouts/ProjectLayout'
+import { InnerLayout } from '@ui/Layouts/InnerLayout'
 import { ProjectDetailPage } from '@ui/ProjectDetailPage'
 import type { Technology } from '@ui/ProjectDetailPage'
 
@@ -14,7 +14,7 @@ const stack: Technology[] = [
 
 const TickerdexPage: FC = () => {
   return (
-    <ProjectLayout>
+    <InnerLayout>
       <ProjectDetailPage
         name="Tickerdex"
         year="2022-"
@@ -58,7 +58,7 @@ const TickerdexPage: FC = () => {
           implement <span className="font-semibold">auth</span> etc.
         </p>
       </ProjectDetailPage>
-    </ProjectLayout>
+    </InnerLayout>
   )
 }
 

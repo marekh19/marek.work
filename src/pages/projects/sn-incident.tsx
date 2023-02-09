@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { ProjectLayout } from '@ui/Layouts/ProjectLayout'
+import { InnerLayout } from '@ui/Layouts/InnerLayout'
 import { ProjectDetailPage } from '@ui/ProjectDetailPage'
 import type { Technology } from '@ui/ProjectDetailPage'
 
@@ -13,7 +13,7 @@ const stack: Technology[] = [
 
 const SNIncidentPage: FC = () => {
   return (
-    <ProjectLayout>
+    <InnerLayout>
       <ProjectDetailPage
         name="ServiceNow Incidents"
         year="2022"
@@ -56,7 +56,7 @@ const SNIncidentPage: FC = () => {
           .
         </p>
       </ProjectDetailPage>
-    </ProjectLayout>
+    </InnerLayout>
   )
 }
 

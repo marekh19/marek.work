@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { ProjectLayout } from '@ui/Layouts/ProjectLayout'
+import { InnerLayout } from '@ui/Layouts/InnerLayout'
 import { ProjectDetailPage } from '@ui/ProjectDetailPage'
 import type { Technology } from '@ui/ProjectDetailPage'
 
@@ -13,7 +13,7 @@ const stack: Technology[] = [
 
 const GuessTheHexPage: FC = () => {
   return (
-    <ProjectLayout>
+    <InnerLayout>
       <ProjectDetailPage
         name="Guess the Hex"
         year="2022"
@@ -36,7 +36,7 @@ const GuessTheHexPage: FC = () => {
           hooks in a single component and also a timeout mechanic.
         </p>
       </ProjectDetailPage>
-    </ProjectLayout>
+    </InnerLayout>
   )
 }
 

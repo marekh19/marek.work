@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-import { ProjectLayout } from '@ui/Layouts/ProjectLayout'
+import { InnerLayout } from '@ui/Layouts/InnerLayout'
 import { ProjectDetailPage } from '@ui/ProjectDetailPage'
 import type { Technology } from '@ui/ProjectDetailPage'
 
@@ -10,11 +10,12 @@ const stack: Technology[] = [
   { name: 'React', url: 'https://reactjs.org/' },
   { name: 'Tailwind CSS', url: 'https://tailwindcss.com/' },
   { name: 'Three.js', url: 'https://threejs.org/' },
+  { name: 'Framer Motion', url: 'https://www.framer.com/motion/' },
 ]
 
 const PortfolioPage: FC = () => {
   return (
-    <ProjectLayout>
+    <InnerLayout>
       <ProjectDetailPage
         name="My Portfolio"
         year="2023"
@@ -40,7 +41,7 @@ const PortfolioPage: FC = () => {
           used <span className="font-semibold">styled-components</span> before.
         </p>
       </ProjectDetailPage>
-    </ProjectLayout>
+    </InnerLayout>
   )
 }
 

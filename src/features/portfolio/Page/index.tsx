@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import type { FC } from 'react'
 
-import { DefaultLayout } from '@ui/Layouts/DefaultLayout'
+import { InnerLayout } from '@ui/Layouts/InnerLayout'
 import { Section } from '@ui/Section'
 
 import { CardsContainer } from '../CardsContainer'
@@ -14,7 +14,7 @@ export const Projects: FC = () => {
       <Head>
         <title>Portfolio - Marek Honzal</title>
       </Head>
-      <DefaultLayout>
+      <InnerLayout>
         <Section heading="Projects" classNames="relative">
           <CardsContainer>
             {projectsDetails.map(
@@ -30,7 +30,7 @@ export const Projects: FC = () => {
             )}
           </CardsContainer>
         </Section>
-      </DefaultLayout>
+      </InnerLayout>
     </>
   )
 }
