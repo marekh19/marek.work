@@ -26,7 +26,7 @@ const TickerdexPage: FC = () => {
           '/Tickerdex/3.png',
         ]}
       >
-        <p className="mb-3 inline-block rounded-md bg-gray-300 p-1 text-xs font-bold uppercase dark:bg-gray-700">
+        <p className="mb-3 inline-block rounded-md bg-gray-300 p-1 font-semibold uppercase dark:bg-gray-700">
           work in progress
         </p>
         <p className="mb-3">
