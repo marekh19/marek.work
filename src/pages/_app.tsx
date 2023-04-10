@@ -16,7 +16,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <HeadDefault />
-      <ThemeProvider enableSystem attribute="class">
+      <ThemeProvider enableSystem attribute="class" disableTransitionOnChange>
         <div className={`${bodyFont.variable} font-sans`}>
           <Layout router={router}>
             <AnimatePresence
