@@ -13,10 +13,15 @@ export const ToggleTheme: FC = () => {
     setIsMounted(true)
   }, [])
 
-  if (!isMounted) return null
-
   const isDarkTheme: boolean = currentTheme === 'dark'
 
+  if (!isMounted) {
+    return (
+      <div>
+        <SunIcon className="h-8 w-8 text-gray-500" />
+      </div>
+    )
+  }
   return (
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
