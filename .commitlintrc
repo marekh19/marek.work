@@ -1,3 +1,0 @@
-{
-  "extends": ["@strv/commitlint-config"]
-}
