@@ -30,10 +30,8 @@ const CutestMonPage: FC = () => {
       >
         <p className="mb-3">
           I wanted to learn more about{' '}
-          <span className="font-semibold">
-            connecting Next.js app to a database
-          </span>
-          . So I created a very similar app that Theo shows in his{' '}
+          <span className="font-semibold">connecting Next.js app to a database</span>. So I created
+          a very similar app that Theo shows in his{' '}
           <a
             className="text-indigo-600 dark:text-indigo-400"
             href="https://youtu.be/PKy2lYEnhgs"
@@ -42,13 +40,12 @@ const CutestMonPage: FC = () => {
           >
             tutorial
           </a>
-          . I&nbsp;used styled-components instead of TailwindCSS and did some
-          things differently to not just blindly follow a tutorial video.
+          . I&nbsp;used styled-components instead of TailwindCSS and did some things differently to
+          not just blindly follow a tutorial video.
         </p>
         <p className="mb-3">
-          I learned how to use <span className="font-semibold">SSG</span> for
-          the results page, <span className="font-semibold">tRPC</span>, and
-          interact with a database through{' '}
+          I learned how to use <span className="font-semibold">SSG</span> for the results page,{' '}
+          <span className="font-semibold">tRPC</span>, and interact with a database through{' '}
           <span className="font-semibold">Prisma ORM</span>.
         </p>
       </ProjectDetailPage>

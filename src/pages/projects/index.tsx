@@ -1,1 +1,1 @@
-export { Projects as default } from '~/features/portfolio/Page'
+export { Projects as default } from '@/features/portfolio/Page'

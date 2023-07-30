@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-export const GitHubIcon: FC = (props) => (
+export const GitHubIcon: FC = props => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"

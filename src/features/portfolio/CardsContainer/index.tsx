@@ -5,7 +5,5 @@ type CardsContainerProps = {
 }
 
 export const CardsContainer: FC<CardsContainerProps> = ({ children }) => {
-  return (
-    <div className="mt-2 grid grid-cols-1 gap-8 sm:grid-cols-2">{children}</div>
-  )
+  return <div className="mt-2 grid grid-cols-1 gap-8 sm:grid-cols-2">{children}</div>
 }

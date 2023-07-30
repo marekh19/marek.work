@@ -1,12 +1,11 @@
-import Image from 'next/image'
 import type { FC } from 'react'
+
+import Image from 'next/image'
 
 export const Introduction: FC = () => (
   <div className="relative mt-5 flex items-center justify-between">
     <div>
-      <h1 className="text-2xl font-medium tracking-wide sm:text-4xl">
-        Marek Honzal
-      </h1>
+      <h1 className="text-2xl font-medium tracking-wide sm:text-4xl">Marek Honzal</h1>
       <h2 className="font-light sm:text-lg">Frontend web developer</h2>
     </div>
     <div className="relative h-28 w-28">

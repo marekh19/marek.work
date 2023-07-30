@@ -23,11 +23,10 @@ const JumpyKnightPage: FC = () => {
         }}
       >
         <p className="mb-3">
-          Simple game with a pixel art style. It&apos;s very similar to the
-          &quot;jumping dinosaur&quot; Google Chrome game when your internet
-          connection is down. There are 2 types of monsters and you have to jump
-          to avoid them. It calculates a score (1 point per second) and stores a
-          high score locally in a&nbsp;file.
+          Simple game with a pixel art style. It&apos;s very similar to the &quot;jumping
+          dinosaur&quot; Google Chrome game when your internet connection is down. There are 2 types
+          of monsters and you have to jump to avoid them. It calculates a score (1 point per second)
+          and stores a high score locally in a&nbsp;file.
         </p>
       </ProjectDetailPage>
     </InnerLayout>

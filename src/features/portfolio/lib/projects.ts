@@ -44,8 +44,7 @@ export const projectsDetails: ProjectDetails[] = [
   {
     name: 'My Portfolio',
     imagePath: '/Portfolio/banner.jpg',
-    description:
-      'This website you are currently browsing! 🔥 I hope you like it.',
+    description: 'This website you are currently browsing! 🔥 I hope you like it.',
     projectLink: '/projects/portfolio',
   },
 ]

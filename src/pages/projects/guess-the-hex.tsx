@@ -26,14 +26,13 @@ const GuessTheHexPage: FC = () => {
         }}
       >
         <p className="mb-3">
-          Single-page app/game. A hex color code is shown and you have to guess
-          which of the 3&nbsp;colors it represents. It counts a streak of
-          successful guesses and if you guess wrong, it&apos;s reset
-          back&nbsp;to&nbsp;0.
+          Single-page app/game. A hex color code is shown and you have to guess which of the
+          3&nbsp;colors it represents. It counts a streak of successful guesses and if you guess
+          wrong, it&apos;s reset back&nbsp;to&nbsp;0.
         </p>
         <p className="mb-3">
-          I wanted to build something quick and fun to practice using multiple
-          hooks in a single component and also a timeout mechanic.
+          I wanted to build something quick and fun to practice using multiple hooks in a single
+          component and also a timeout mechanic.
         </p>
       </ProjectDetailPage>
     </InnerLayout>

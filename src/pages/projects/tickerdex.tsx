@@ -20,11 +20,7 @@ const TickerdexPage: FC = () => {
         year="2022-"
         stack={stack}
         websiteUrl="https://dev.tickerdex.com"
-        imagePaths={[
-          '/Tickerdex/1.png',
-          '/Tickerdex/2.png',
-          '/Tickerdex/3.png',
-        ]}
+        imagePaths={['/Tickerdex/1.png', '/Tickerdex/2.png', '/Tickerdex/3.png']}
       >
         <p className="mb-3 inline-block rounded-md bg-gray-300 p-1 font-semibold uppercase dark:bg-gray-700">
           work in progress
@@ -39,23 +35,21 @@ const TickerdexPage: FC = () => {
           >
             very similar app
           </a>{' '}
-          about a year ago in the{' '}
-          <span className="font-semibold">Django Python framework</span>. But I
-          wasn&apos;t satisfied with it. At that time I started to learn React
-          and Next.js so I thought it would be a good idea to build it once
-          again but better and with much more features.
+          about a year ago in the <span className="font-semibold">Django Python framework</span>.
+          But I wasn&apos;t satisfied with it. At that time I started to learn React and Next.js so
+          I thought it would be a good idea to build it once again but better and with much more
+          features.
         </p>
         <p className="mb-3">
-          When it&apos;s ready to release it will offer a detailed analysis of
-          stocks, ETFs, scoring, S&P 500 rankings based on this score, creating
-          custom watch lists and more.
+          When it&apos;s ready to release it will offer a detailed analysis of stocks, ETFs,
+          scoring, S&P 500 rankings based on this score, creating custom watch lists and more.
         </p>
         <p>
-          During the development process, I&apos;ve learnt many new concepts
-          like <span className="font-semibold">input debouncing</span>, using{' '}
+          During the development process, I&apos;ve learnt many new concepts like{' '}
+          <span className="font-semibold">input debouncing</span>, using{' '}
           <span className="font-semibold">abort controller</span>,{' '}
-          <span className="font-semibold">React Context API</span>, how to
-          implement <span className="font-semibold">auth</span> etc.
+          <span className="font-semibold">React Context API</span>, how to implement{' '}
+          <span className="font-semibold">auth</span> etc.
         </p>
       </ProjectDetailPage>
     </InnerLayout>

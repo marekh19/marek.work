@@ -1,1 +1,1 @@
-export { Home as default } from '~/features/home/Page'
+export { Home as default } from '@/features/home/Page'

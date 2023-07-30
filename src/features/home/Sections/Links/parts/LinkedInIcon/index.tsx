@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 
-export const LinkedInIcon: FC = (props) => (
+export const LinkedInIcon: FC = props => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"

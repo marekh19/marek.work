@@ -1,8 +1,9 @@
+import type { FC } from 'react'
+import { useEffect, useState } from 'react'
+
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
-import type { FC } from 'react'
-import { useState, useEffect } from 'react'
 
 export const ToggleTheme: FC = () => {
   const { systemTheme, theme, setTheme } = useTheme()

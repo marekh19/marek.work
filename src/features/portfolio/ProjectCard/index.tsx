@@ -1,6 +1,7 @@
+import type { FC } from 'react'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import type { FC } from 'react'
 
 type ProjectCardProps = {
   name: string
@@ -17,10 +18,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
 }) => {
   return (
     <Link href={projectLink}>
-      <article
-        title={name}
-        className="w-full p-2 text-gray-900 dark:text-gray-50"
-      >
+      <article title={name} className="w-full p-2 text-gray-900 dark:text-gray-50">
         <div className="relative w-full">
           <Image
             src={imagePath}
@@ -30,9 +28,7 @@ export const ProjectCard: FC<ProjectCardProps> = ({
             className="w-full rounded-md"
           />
         </div>
-        <h2 className="my-2 text-xl font-light tracking-wide md:text-2xl">
-          {name}
-        </h2>
+        <h2 className="my-2 text-xl font-light tracking-wide md:text-2xl">{name}</h2>
         <p className="text-gray-600 dark:text-gray-400">{description}</p>
       </article>
     </Link>

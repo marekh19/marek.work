@@ -1,11 +1,13 @@
-import '~/styles/globals.css'
-import { Inter } from '@next/font/google'
-import { AnimatePresence } from 'framer-motion'
 import type { AppProps } from 'next/app'
+import { Inter } from 'next/font/google'
+
+import { HeadDefault } from '@/features/core/HeadDefault'
+import { AnimatePresence } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
 
 import { Layout } from '@ui/Layouts/MainLayout'
-import { HeadDefault } from '~/features/core/HeadDefault'
+
+import '@/styles/globals.css'
 
 const bodyFont = Inter({
   subsets: ['latin'],

@@ -1,8 +1,10 @@
-import { ChevronRightIcon } from '@heroicons/react/24/solid'
+import type { FC, ReactNode } from 'react'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import type { FC, ReactNode } from 'react'
+
+import { ChevronRightIcon } from '@heroicons/react/24/solid'
 
 export type Technology = {
   name: string
@@ -40,17 +42,12 @@ export const ProjectDetailPage: FC<Props> = ({
       </Head>
       <div className="z-50 pt-3 backdrop-blur-md">
         <div className="flex items-center">
-          <Link
-            href="/projects"
-            className="text-indigo-600 dark:text-indigo-400"
-          >
+          <Link href="/projects" className="text-indigo-600 dark:text-indigo-400">
             Projects
           </Link>
           <ChevronRightIcon className="mx-1 h-4" />
           <h1 className="mr-2 text-xl font-medium sm:text-2xl">{name}</h1>
-          <h2 className="rounded-md bg-gray-300 p-1 text-xs font-bold dark:bg-gray-700">
-            {year}
-          </h2>
+          <h2 className="rounded-md bg-gray-300 p-1 text-xs font-bold dark:bg-gray-700">{year}</h2>
         </div>
 
         <div className="mt-3">{children}</div>

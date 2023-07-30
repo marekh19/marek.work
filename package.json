@@ -12,10 +12,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.17",
     "@heroicons/react": "^2.0.18",
     "@react-three/drei": "^9.80.0",
     "@react-three/fiber": "^8.13.6",
     "framer-motion": "^10.15.0",
+    "graphql": "^16.7.1",
     "next": "13.4.12",
     "next-themes": "^0.2.1",
     "react": "18.2.0",

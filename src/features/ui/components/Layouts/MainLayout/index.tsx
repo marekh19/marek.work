@@ -1,10 +1,12 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import type { Router } from 'next/router'
 import type { FC, ReactNode } from 'react'
 
-import { Footer } from '../../Footer'
-import { Header } from '../../Header'
-import { ModelViewer } from '../../Threejs/ModelViewer'
+import type { Router } from 'next/router'
+
+import { AnimatePresence, motion } from 'framer-motion'
+
+import { Footer } from '@ui/Footer'
+import { Header } from '@ui/Header'
+import { ModelViewer } from '@ui/Threejs/ModelViewer'
 
 type Props = {
   children: ReactNode
@@ -34,7 +36,7 @@ export const Layout: FC<Props> = ({ children, router }) => {
             variants={variants}
             transition={{ duration: 0.4, type: 'easeInOut' }}
             style={{ position: 'relative' }}
-            className="relative m-auto mt-[-8rem] mb-[-8rem] h-[26rem] w-full sm:h-[36rem]"
+            className="relative m-auto my-[-8rem] h-[26rem] w-full sm:h-[36rem]"
           >
             <ModelViewer
               modelPath="/keyboard.glb"
@@ -46,7 +48,7 @@ export const Layout: FC<Props> = ({ children, router }) => {
         )}
       </AnimatePresence>
 
-      <main className="mx-auto w-full flex-grow px-4 sm:px-6">{children}</main>
+      <main className="mx-auto w-full grow px-4 sm:px-6">{children}</main>
       <Footer />
     </div>
   )

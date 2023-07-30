@@ -17,11 +17,7 @@ export const Links: FC = () => (
           <span className="ml-2 font-semibold">@marekh19</span>
         </button>
       </a>
-      <a
-        href="https://linkedin.com/in/marekhonzal/"
-        target="blank"
-        rel="noreferrer"
-      >
+      <a href="https://linkedin.com/in/marekhonzal/" target="blank" rel="noreferrer">
         <button
           type="button"
           className="my-3 flex items-center justify-center rounded-lg bg-transparent p-3 text-yellow-600 transition duration-300 ease-in-out hover:bg-yellow-200 dark:text-yellow-500 dark:hover:bg-yellow-900"
