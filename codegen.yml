@@ -1,0 +1,8 @@
+overwrite: true
+schema: schema.json
+documents: src/services/apollo/queries/*.gql
+generates:
+  src/types/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'

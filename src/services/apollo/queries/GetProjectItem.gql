@@ -1,0 +1,22 @@
+query GetProjectItem($projectItemId: ID!) {
+  ProjectItem(id: $projectItemId) {
+    content {
+      description
+      github_link {
+        url
+      }
+      images {
+        id
+        name
+        filename
+      }
+      name
+      stack
+      webiste_link {
+        url
+      }
+      work_in_progress
+      year
+    }
+  }
+}
