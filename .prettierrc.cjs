@@ -20,7 +20,6 @@ module.exports = {
     '^@ui/(.*)$',
     '^@/components/ui/(.*)$',
     '^@/components/(.*)$',
-    '^@/styles/(.*)$',
     '^@/app/(.*)$',
     '^[./]',
   ],

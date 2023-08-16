@@ -2,13 +2,18 @@ import { type ReactNode } from 'react'
 
 import { type Metadata } from 'next'
 
-import { ThemeProvider } from 'next-themes'
+import { fontDisplay, fontSans } from '@/styles/fonts'
+import '@/styles/globals.css'
 
 import { siteConfig } from '@/config/site'
 
 import { cn } from '@/lib/utils'
 
-import { fontDisplay, fontSans } from '@/styles/fonts'
+import { Footer } from '@/components/ui/Footer'
+import { Header } from '@/components/ui/Header'
+import { KeyboardModel } from '@/components/ui/KeyboardModel'
+
+import { Providers } from '@/components/Providers'
 
 export const metadata: Metadata = {
   title: {
@@ -31,15 +36,18 @@ export default function RootLayout({ children }: Props) {
     <html lang="en">
       <head />
       <body
-        className={
-          (cn('bg-background min-h-screen font-sans antialiased'),
+        className={cn(
+          'bg-background mx-auto flex min-h-screen max-w-5xl flex-col font-sans antialiased',
           fontSans.variable,
-          fontDisplay.variable)
-        }
+          fontDisplay.variable
+        )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Providers>
+          <Header />
+          <KeyboardModel />
           {children}
-        </ThemeProvider>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )

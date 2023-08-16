@@ -1,10 +1,12 @@
+'use client'
+
 import { useRef } from 'react'
 import type { FC } from 'react'
 
 import { useFrame, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-import type { GltfProps } from '../types/GltfProps'
+import type { GltfProps } from '@/types/threejs'
 
 export const GltfModel: FC<GltfProps> = ({
   modelPath,

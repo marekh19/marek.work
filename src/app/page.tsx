@@ -1,4 +1,4 @@
-import { InnerLayout } from '@ui/Layouts/InnerLayout'
+import { InnerLayout } from '@ui/InnerLayout'
 
 import { Introduction } from '@/components/homepage/Introduction'
 import { Background } from '@/components/homepage/sections/Background'
