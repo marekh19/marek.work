@@ -1,47 +1,48 @@
 module.exports = {
-  $schema: "https://json.schemastore.org/eslintrc",
+  $schema: 'https://json.schemastore.org/eslintrc',
   root: true,
   extends: [
-    "next/core-web-vitals",
-    "prettier",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:tailwindcss/recommended",
+    'next/core-web-vitals',
+    'prettier',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:tailwindcss/recommended',
   ],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "tailwindcss"],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'tailwindcss'],
   rules: {
-    "tailwindcss/no-custom-classname": "off",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
+    'tailwindcss/no-custom-classname': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
       {
-        argsIgnorePattern: "^_",
-        varsIgnorePattern: "^_",
-        caughtErrorsIgnorePattern: "^_",
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
       },
     ],
-    "@typescript-eslint/no-explicit-any": "warn",
-    "no-restricted-imports": [
-      "error",
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'no-restricted-imports': [
+      'error',
       {
-        name: "react",
-        importNames: ["default"],
+        name: 'react',
+        importNames: ['default'],
         message:
           "Default React import is not necessary for JSX to work. Please use named imports. (e.g. `import { useEffect } from 'react'`) (https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html)",
       },
     ],
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
+    '@typescript-eslint/consistent-type-imports': [
+      'warn',
       {
-        fixStyle: "inline-type-imports",
+        fixStyle: 'inline-type-imports',
       },
     ],
+    '@typescript-eslint/ban-ts-comment': 'warn',
   },
   settings: {
     tailwindcss: {
-      callees: ["cn", "cva"],
-      config: "tailwind.config.js",
+      callees: ['cn', 'cva'],
+      config: 'tailwind.config.js',
     },
   },
-};
+}

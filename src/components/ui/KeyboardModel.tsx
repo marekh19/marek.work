@@ -1,6 +1,6 @@
 'use client'
 
-import { type FC } from 'react'
+import { type FC, memo } from 'react'
 
 import { usePathname } from 'next/navigation'
 
@@ -14,7 +14,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: 20 },
 }
 
-export const KeyboardModel: FC = () => {
+const KeyboardModel: FC = () => {
   const path = usePathname()
   const projectDetailPagePattern = /\/projects\/[\w-]+/giu
   const isProjectDetailPage = projectDetailPagePattern.test(path)
@@ -42,3 +42,5 @@ export const KeyboardModel: FC = () => {
     </AnimatePresence>
   )
 }
+
+export const Keyboard = memo(KeyboardModel)

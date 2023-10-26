@@ -17,7 +17,7 @@ export const ModelViewer: FC<GltfProps> = ({
   rotation = [45, 0, 0],
 }) => {
   return (
-    <Suspense fallback={'Loading'}>
+    <Suspense fallback={null}>
       <Canvas>
         <ambientLight intensity={0.4} />
         <spotLight position={[10, 10, 10]} angle={0.2} penumbra={1} />
