@@ -2,8 +2,7 @@
 
 import type { FC } from 'react'
 import { useEffect, useState } from 'react'
-
-import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
+import { Moon, Sun } from '@phosphor-icons/react/dist/ssr'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 
@@ -21,7 +20,7 @@ export const ToggleTheme: FC = () => {
   if (!isMounted) {
     return (
       <div>
-        <SunIcon className="h-8 w-8 text-gray-500" />
+        <Sun className="h-8 w-8 text-gray-500" />
       </div>
     )
   }
@@ -35,19 +34,17 @@ export const ToggleTheme: FC = () => {
         transition={{ duration: 0.2 }}
       >
         {isDarkTheme ? (
-          <SunIcon
+          <Sun
             className="h-8 w-8 text-yellow-500 transition duration-300 ease-in-out hover:text-orange-400"
             role="button"
             onClick={() => setTheme('light')}
-            title="Switch to light theme"
             aria-label="Switch to light theme"
           />
         ) : (
-          <MoonIcon
+          <Moon
             className="h-8 w-8 text-gray-700 transition duration-300 ease-in-out hover:text-yellow-500"
             role="button"
             onClick={() => setTheme('dark')}
-            title="Switch to dark theme"
             aria-label="Switch to dark theme"
           />
         )}

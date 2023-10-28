@@ -1,8 +1,8 @@
 overwrite: true
-schema: schema.json
-documents: src/services/apollo/queries/*.gql
+schema: "https://localhost:4000"
+documents: "**/*.graphql"
 generates:
-  src/types/graphql.ts:
+  src/generated/graphql.ts:
     plugins:
-      - 'typescript'
-      - 'typescript-operations'
+      - "typescript-common"
+      - "typescript-client"

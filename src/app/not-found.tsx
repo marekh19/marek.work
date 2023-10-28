@@ -1,8 +1,9 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
-
 import { Button } from '@ui/Button'
 import { InnerLayout } from '@ui/InnerLayout'
+
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = {
   title: 'Not found',
@@ -16,7 +17,7 @@ export default function NotFound() {
         <p className="text-gray-600 dark:text-gray-400">
           This page is not found. Click below to return to homepage.
         </p>
-        <Link href="/">
+        <Link href={ROUTES.home}>
           <Button text="GO" />
         </Link>
       </div>

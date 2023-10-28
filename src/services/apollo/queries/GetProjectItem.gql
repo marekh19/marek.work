@@ -10,8 +10,11 @@ query GetProjectItem($projectItemId: ID!) {
         name
         filename
       }
+      stack {
+        name
+        content
+      }
       name
-      stack
       webiste_link {
         url
       }

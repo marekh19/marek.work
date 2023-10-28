@@ -1,8 +1,8 @@
 import type { FC } from 'react'
-
 import Head from 'next/head'
 
-const baseUrl = process.env.NEXT_PUBLIC_DEPLOYMENT_URL ?? 'http://localhost:3000'
+const baseUrl =
+  process.env.NEXT_PUBLIC_DEPLOYMENT_URL ?? 'http://localhost:3000'
 
 const pageDescription =
   "Hi, my name is Marek Honzal! I'm a web developer and this is my personal portfolio. You can learn more about me here and check projects I've been working on."

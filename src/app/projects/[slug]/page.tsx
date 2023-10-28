@@ -1,33 +1,40 @@
+import { notFound } from 'next/navigation'
 import { apolloClient } from '@/services/apollo/apollo-client'
 import GetProjectItem from '@/services/apollo/queries/GetProjectItem.gql'
-import GetProjectItems from '@/services/apollo/queries/GetProjectItems.gql'
 
-import { type GetProjectItemQuery, type GetProjectItemsQuery } from '@/types/graphql'
+import { type GetProjectItemQuery } from '@/types/__generated__/graphql'
+import { Badge } from '@/components/ui/Badge'
+import ProjectDetail from '@/components/project-detail/ProjectDetail'
 
-export async function generateStaticParams() {
-  const { data } = await apolloClient.query<GetProjectItemsQuery>({
-    query: GetProjectItems,
-  })
-
-  const projects = data.ProjectItems?.items?.map(project => ({
-    slug: project?.slug ?? '',
-  }))
-
-  return projects ?? []
-}
-
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function ProjectDetailPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   const { slug } = params
   const { data } = await apolloClient.query<GetProjectItemQuery>({
     query: GetProjectItem,
     variables: { projectItemId: `projects/${slug}` },
   })
 
+  if (!data.ProjectItem) notFound()
+
+  const {
+    ProjectItem: { content: project },
+  } = data
+
+  console.log({ project: project?.github_link })
+
   return (
-    <div>
-      <h1 className="text-4xl">{slug}</h1>
-      <code className="block overflow-x-scroll whitespace-pre">{JSON.stringify(data)}</code>
-    </div>
+    <ProjectDetail className="space-y-6">
+      <ProjectDetail.Header name={project?.name} year={project?.year} />
+      {project?.work_in_progress && <Badge text="work in progress" />}
+      <ProjectDetail.Description description={project?.description} />
+      <ProjectDetail.Stack stack={project?.stack} />
+      <ProjectDetail.Website link={project?.webiste_link} />
+      <ProjectDetail.Github link={project?.github_link} />
+      <ProjectDetail.ImageGallery images={project?.images} />
+    </ProjectDetail>
   )
 }
 
