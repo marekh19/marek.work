@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
+import { ArrowRight } from '@phosphor-icons/react/dist/ssr'
 
 import { ROUTES } from '@/lib/routes'
 
@@ -13,13 +14,15 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <InnerLayout>
-      <div className="relative mx-auto flex flex-col items-center rounded bg-gray-800/10 p-4 text-center text-gray-900 backdrop-blur-lg dark:bg-gray-200/10 dark:text-gray-50 sm:w-3/4">
-        <h1 className="mb-3 text-4xl font-semibold">!good</h1>
-        <p className="text-gray-600 dark:text-gray-400">
-          This page is not found. Click below to return to homepage.
-        </p>
+      <div className="mx-auto flex max-w-[42.5rem] flex-col items-center rounded-lg bg-accent/20 p-4 text-center backdrop-blur-lg">
+        <h1 className="mb-4 text-4xl font-semibold text-primary">!good</h1>
+        <p className="mb-2">This page is not found.</p>
+        <p className="mb-4">Click below to go to the homepage</p>
         <Link href={ROUTES.home}>
-          <Button text="GO" />
+          <Button accent="secondary" className="gap-2">
+            <span>GO</span>
+            <ArrowRight className="h-5 w-5" />
+          </Button>
         </Link>
       </div>
     </InnerLayout>

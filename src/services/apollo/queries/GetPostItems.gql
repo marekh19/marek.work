@@ -1,0 +1,10 @@
+query GetPostItems {
+  PostItems {
+    items {
+      name
+      id
+      slug
+      full_slug
+    }
+  }
+}

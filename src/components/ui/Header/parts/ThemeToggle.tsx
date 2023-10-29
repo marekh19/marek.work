@@ -6,7 +6,7 @@ import { Moon, Sun } from '@phosphor-icons/react/dist/ssr'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 
-export const ToggleTheme: FC = () => {
+export const ThemeToggle: FC = () => {
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === 'system' ? systemTheme : theme
   const [isMounted, setIsMounted] = useState(false)
@@ -20,7 +20,7 @@ export const ToggleTheme: FC = () => {
   if (!isMounted) {
     return (
       <div>
-        <Sun className="h-8 w-8 text-gray-500" />
+        <Sun className="h-6 w-6 text-gray-500" />
       </div>
     )
   }
@@ -31,18 +31,19 @@ export const ToggleTheme: FC = () => {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.3 }}
+        className="ml-2"
       >
         {isDarkTheme ? (
           <Sun
-            className="h-8 w-8 text-yellow-500 transition duration-300 ease-in-out hover:text-orange-400"
+            className="h-6 w-6 text-text transition duration-300 ease-in-out hover:text-yellow-500"
             role="button"
             onClick={() => setTheme('light')}
             aria-label="Switch to light theme"
           />
         ) : (
           <Moon
-            className="h-8 w-8 text-gray-700 transition duration-300 ease-in-out hover:text-yellow-500"
+            className="h-6 w-6 text-text transition duration-300 ease-in-out hover:text-yellow-500"
             role="button"
             onClick={() => setTheme('dark')}
             aria-label="Switch to dark theme"

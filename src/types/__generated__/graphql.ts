@@ -25,6 +25,7 @@ export type Scalars = {
   Boolean: { input: boolean; output: boolean }
   Int: { input: number; output: number }
   Float: { input: number; output: number }
+  BlockScalar: { input: any; output: any }
   ISO8601DateTime: { input: any; output: any }
   JsonScalar: { input: any; output: any }
 }
@@ -168,6 +169,46 @@ export type LinkEntry = {
   uuid?: Maybe<Scalars['String']['output']>
 }
 
+export type PageComponent = {
+  __typename?: 'PageComponent'
+  _editable?: Maybe<Scalars['String']['output']>
+  _uid?: Maybe<Scalars['String']['output']>
+  blocks?: Maybe<Scalars['BlockScalar']['output']>
+  component?: Maybe<Scalars['String']['output']>
+}
+
+export type PageItem = {
+  __typename?: 'PageItem'
+  alternates?: Maybe<Array<Maybe<Alternate>>>
+  content?: Maybe<PageComponent>
+  created_at?: Maybe<Scalars['String']['output']>
+  default_full_slug?: Maybe<Scalars['String']['output']>
+  first_published_at?: Maybe<Scalars['String']['output']>
+  full_slug?: Maybe<Scalars['String']['output']>
+  group_id?: Maybe<Scalars['Int']['output']>
+  id?: Maybe<Scalars['Int']['output']>
+  is_startpage?: Maybe<Scalars['Boolean']['output']>
+  lang?: Maybe<Scalars['String']['output']>
+  meta_data?: Maybe<Scalars['JsonScalar']['output']>
+  name?: Maybe<Scalars['String']['output']>
+  parent_id?: Maybe<Scalars['Int']['output']>
+  path?: Maybe<Scalars['String']['output']>
+  position?: Maybe<Scalars['Int']['output']>
+  published_at?: Maybe<Scalars['String']['output']>
+  release_id?: Maybe<Scalars['Int']['output']>
+  slug?: Maybe<Scalars['String']['output']>
+  sort_by_date?: Maybe<Scalars['String']['output']>
+  tag_list?: Maybe<Array<Maybe<Scalars['String']['output']>>>
+  translated_slugs?: Maybe<Array<Maybe<TranslatedSlug>>>
+  uuid?: Maybe<Scalars['String']['output']>
+}
+
+export type PageItems = {
+  __typename?: 'PageItems'
+  items?: Maybe<Array<Maybe<PageItem>>>
+  total?: Maybe<Scalars['Int']['output']>
+}
+
 export type PostComponent = {
   __typename?: 'PostComponent'
   _editable?: Maybe<Scalars['String']['output']>
@@ -284,6 +325,8 @@ export type QueryType = {
   DatasourceEntries?: Maybe<DatasourceEntries>
   Datasources?: Maybe<Datasources>
   Links?: Maybe<LinkEntries>
+  PageItem?: Maybe<PageItem>
+  PageItems?: Maybe<PageItems>
   PostItem?: Maybe<PostItem>
   PostItems?: Maybe<PostItems>
   ProjectItem?: Maybe<ProjectItem>
@@ -345,6 +388,41 @@ export type QueryTypeDatasourcesArgs = {
 export type QueryTypeLinksArgs = {
   paginated?: InputMaybe<Scalars['Boolean']['input']>
   starts_with?: InputMaybe<Scalars['String']['input']>
+}
+
+export type QueryTypePageItemArgs = {
+  find_by?: InputMaybe<Scalars['String']['input']>
+  from_release?: InputMaybe<Scalars['Int']['input']>
+  id: Scalars['ID']['input']
+  language?: InputMaybe<Scalars['String']['input']>
+  resolve_links?: InputMaybe<Scalars['String']['input']>
+  resolve_relations?: InputMaybe<Scalars['String']['input']>
+}
+
+export type QueryTypePageItemsArgs = {
+  by_slugs?: InputMaybe<Scalars['String']['input']>
+  by_uuids?: InputMaybe<Scalars['String']['input']>
+  by_uuids_ordered?: InputMaybe<Scalars['String']['input']>
+  excluding_fields?: InputMaybe<Scalars['String']['input']>
+  excluding_ids?: InputMaybe<Scalars['String']['input']>
+  excluding_slugs?: InputMaybe<Scalars['String']['input']>
+  fallback_lang?: InputMaybe<Scalars['String']['input']>
+  filter_query?: InputMaybe<Scalars['JsonScalar']['input']>
+  first_published_at_gt?: InputMaybe<Scalars['String']['input']>
+  first_published_at_lt?: InputMaybe<Scalars['String']['input']>
+  from_release?: InputMaybe<Scalars['String']['input']>
+  is_startpage?: InputMaybe<Scalars['String']['input']>
+  language?: InputMaybe<Scalars['String']['input']>
+  page?: InputMaybe<Scalars['Int']['input']>
+  per_page?: InputMaybe<Scalars['Int']['input']>
+  published_at_gt?: InputMaybe<Scalars['String']['input']>
+  published_at_lt?: InputMaybe<Scalars['String']['input']>
+  resolve_links?: InputMaybe<Scalars['String']['input']>
+  resolve_relations?: InputMaybe<Scalars['String']['input']>
+  search_term?: InputMaybe<Scalars['String']['input']>
+  sort_by?: InputMaybe<Scalars['String']['input']>
+  starts_with?: InputMaybe<Scalars['String']['input']>
+  with_tag?: InputMaybe<Scalars['String']['input']>
 }
 
 export type QueryTypePostItemArgs = {
@@ -559,6 +637,34 @@ export type TranslatedSlug = {
   lang: Scalars['String']['output']
   name?: Maybe<Scalars['String']['output']>
   path?: Maybe<Scalars['String']['output']>
+}
+
+export type GetPageItemQueryVariables = Exact<{
+  pageItemId: Scalars['ID']['input']
+}>
+
+export type GetPageItemQuery = {
+  __typename?: 'QueryType'
+  PageItem?: {
+    __typename?: 'PageItem'
+    content?: { __typename?: 'PageComponent'; blocks?: any | null } | null
+  } | null
+}
+
+export type GetPostItemsQueryVariables = Exact<{ [key: string]: never }>
+
+export type GetPostItemsQuery = {
+  __typename?: 'QueryType'
+  PostItems?: {
+    __typename?: 'PostItems'
+    items?: Array<{
+      __typename?: 'PostItem'
+      name?: string | null
+      id?: number | null
+      slug?: string | null
+      full_slug?: string | null
+    } | null> | null
+  } | null
 }
 
 export type GetProjectItemQueryVariables = Exact<{

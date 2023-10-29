@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Portfolio',
 }
 
-export default async function Projects() {
+export default async function ProjectsPage() {
   const { data } = await apolloClient.query<GetProjectItemsOverviewQuery>({
     query: GetProjectItemsOverview,
     fetchPolicy: 'no-cache',
@@ -20,7 +20,7 @@ export default async function Projects() {
 
   return (
     <InnerLayout>
-      <Section heading="Projects" classNames="relative">
+      <Section name="Projects">
         <div className="mt-2 grid grid-cols-1 gap-8 sm:grid-cols-2">
           {data.ProjectItems?.items?.map(project => (
             <ProjectCard

@@ -9,6 +9,7 @@ import GetProjectItem from '@/services/apollo/queries/GetProjectItem.gql'
 import GetProjectItems from '@/services/apollo/queries/GetProjectItems.gql'
 
 import { Badge } from '@ui/Badge'
+import { InnerLayout } from '@ui/InnerLayout'
 import ProjectDetail from '@/components/project-detail/ProjectDetail'
 
 export async function generateStaticParams() {
@@ -43,14 +44,16 @@ export default async function ProjectDetailPage({
   } = data
 
   return (
-    <ProjectDetail className="space-y-6">
-      <ProjectDetail.Header name={project?.name} year={project?.year} />
-      {project?.work_in_progress && <Badge text="work in progress" />}
-      <ProjectDetail.Description description={project?.description} />
-      <ProjectDetail.Stack stack={project?.stack} />
-      <ProjectDetail.Website link={project?.webiste_link} />
-      <ProjectDetail.Github link={project?.github_link} />
-      <ProjectDetail.ImageGallery images={project?.images} />
-    </ProjectDetail>
+    <InnerLayout>
+      <ProjectDetail className="mx-auto max-w-[42.5rem] space-y-6">
+        <ProjectDetail.Header name={project?.name} year={project?.year} />
+        {project?.work_in_progress && <Badge text="work in progress" />}
+        <ProjectDetail.Description description={project?.description} />
+        <ProjectDetail.Stack stack={project?.stack} />
+        <ProjectDetail.Website link={project?.webiste_link} />
+        <ProjectDetail.Github link={project?.github_link} />
+        <ProjectDetail.ImageGallery images={project?.images} />
+      </ProjectDetail>
+    </InnerLayout>
   )
 }

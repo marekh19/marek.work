@@ -1,21 +1,20 @@
 import type { FC } from 'react'
-import Link from 'next/link'
 
-import { ROUTES } from '@/lib/routes'
-
+import { Markdown } from '@ui/Markdown'
 import { Section } from '@ui/Section'
 
-export const ILove: FC = () => (
-  <Section heading="I ♥">
-    <p>
-      My wife, our 2 whippet dogs, traveling, investing &&nbsp;all&nbsp;kinds of
-      tech stuff - working on{' '}
-      <Link href={ROUTES.projects}>
-        <span className="text-indigo-600 transition-colors duration-300 ease-in-out hover:text-indigo-400 dark:text-indigo-400 dark:hover:text-indigo-600">
-          my&nbsp;apps
-        </span>
-      </Link>
-      , Linux, homelab, mechanical keyboards
-    </p>
-  </Section>
-)
+type Props = {
+  // TODO: fix types
+  data: any[]
+}
+
+export const ILove: FC<Props> = ({ data }) => {
+  const blockData = data.filter(block => block.name === 'I ❤️').at(0)
+  if (!blockData) return null
+
+  return (
+    <Section name={blockData.name}>
+      <Markdown content={blockData.content} />
+    </Section>
+  )
+}

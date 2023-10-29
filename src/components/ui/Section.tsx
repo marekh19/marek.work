@@ -1,15 +1,17 @@
 import type { FC, ReactNode } from 'react'
 
+import { cn } from '@/lib/utils'
+
 type Props = {
-  heading: string
-  classNames?: string
+  name: string
+  className?: string
   children: ReactNode
 }
 
-export const Section: FC<Props> = ({ heading, children, classNames }) => (
-  <section className={`mt-8 ${classNames}`}>
-    <h3 className="mb-2 inline-block border-b-4 border-gray-400 text-2xl dark:border-gray-600">
-      {heading}
+export const Section: FC<Props> = ({ name, children, className }) => (
+  <section className={cn('mx-auto mt-12 w-full max-w-[42.5rem]', className)}>
+    <h3 className="mb-4 inline-block border-b-4 border-accent text-2xl">
+      {name}
     </h3>
     {children}
   </section>

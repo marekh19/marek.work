@@ -36,13 +36,13 @@ const MeshComponent: FC<MeshComponentProps> = ({ shouldRotate }) => {
 
 export const Keyboard: FC = () => {
   const path = usePathname()
-  const isProjectDetailPage = path.includes('projects/')
+  const isDetailPage = path.includes('projects/') || path.includes('posts/')
   const [shouldRotate, setShouldRotate] = useState(true)
 
   return (
     <>
-      {!isProjectDetailPage && (
-        <div className="relative m-auto my-[-8rem] h-[26rem] w-full sm:h-[36rem]">
+      {!isDetailPage && (
+        <div className="relative m-auto my-[-8rem] h-[26rem] w-full max-w-[42rem] sm:h-[36rem]">
           <Canvas
             className="h-full w-full"
             onMouseEnter={() => setShouldRotate(false)}

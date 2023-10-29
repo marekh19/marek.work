@@ -8,9 +8,9 @@ import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 
 import { Footer } from '@ui/Footer'
-import { Header } from '@ui/Header'
 import { Keyboard } from '@ui/KeyboardModel'
 import { Providers } from '@/components/Providers'
+import { Header } from '@/components/ui/Header/Header'
 
 export const metadata: Metadata = {
   title: {
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: Props) {
       <head />
       <body
         className={cn(
-          'min-h-screen font-sans antialiased',
+          'flex min-h-screen flex-col items-center font-sans antialiased',
           fontSans.variable,
           fontDisplay.variable
         )}
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: Props) {
         <Providers>
           <Header />
           <Keyboard />
-          {children}
+          <main className="w-full grow">{children}</main>
           <Footer />
         </Providers>
       </body>
