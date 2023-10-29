@@ -1,5 +1,4 @@
 import { InnerLayout } from '@ui/InnerLayout'
-
 import { Background } from '@/components/homepage/Background'
 import { Bio } from '@/components/homepage/Bio'
 import { ILove } from '@/components/homepage/ILove'

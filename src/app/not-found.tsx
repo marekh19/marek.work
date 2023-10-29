@@ -1,9 +1,10 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
-import { Button } from '@ui/Button'
-import { InnerLayout } from '@ui/InnerLayout'
 
 import { ROUTES } from '@/lib/routes'
+
+import { Button } from '@ui/Button'
+import { InnerLayout } from '@ui/InnerLayout'
 
 export const metadata: Metadata = {
   title: 'Not found',

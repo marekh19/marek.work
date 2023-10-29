@@ -1,9 +1,10 @@
 import type { FC } from 'react'
 import Link from 'next/link'
-import { Section } from '@ui//Section'
-import { Button } from '@ui/Button'
 
 import { ROUTES } from '@/lib/routes'
+
+import { Section } from '@ui//Section'
+import { Button } from '@ui/Button'
 
 export const Work: FC = () => (
   <Section heading="Work">

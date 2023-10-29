@@ -11,8 +11,10 @@ type Props = {
 
 export const Description: FC<Props> = ({ description, className }) => {
   return (
-    <div className={cn('', className)}>
-      <Markdown>{description}</Markdown>
+    <div className={cn('w-full', className)}>
+      <Markdown className="prose min-w-full text-text dark:prose-invert">
+        {description}
+      </Markdown>
     </div>
   )
 }

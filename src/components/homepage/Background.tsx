@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+
 import { Section } from '@ui/Section'
 
 export const Background: FC = () => (

@@ -1,15 +1,15 @@
 import { type ReactNode } from 'react'
 import { type Metadata } from 'next'
 
-import { fontDisplay, fontSans } from '@/styles/fonts'
-
 import '@/styles/globals.css'
 
+import { fontDisplay, fontSans } from '@/styles/fonts'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
-import { Footer } from '@/components/ui/Footer'
-import { Header } from '@/components/ui/Header'
-import { Keyboard } from '@/components/ui/KeyboardModel'
+
+import { Footer } from '@ui/Footer'
+import { Header } from '@ui/Header'
+import { Keyboard } from '@ui/KeyboardModel'
 import { Providers } from '@/components/Providers'
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: Props) {
       <head />
       <body
         className={cn(
-          'bg-background flex min-h-screen flex-col font-sans antialiased',
+          'min-h-screen font-sans antialiased',
           fontSans.variable,
           fontDisplay.variable
         )}

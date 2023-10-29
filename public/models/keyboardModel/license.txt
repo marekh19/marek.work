@@ -1,11 +1,11 @@
 Model Information:
-* title:	VortexSeries Mechanical Keyboard GT-8 / NJ80
-* source:	https://sketchfab.com/3d-models/vortexseries-mechanical-keyboard-gt-8-nj80-02d16e9dae72419aa24ec6788318f92b
-* author:	Rendy K (https://sketchfab.com/RendyK)
+* title:	Mechanical Keyboard - Aesthetic
+* source:	https://sketchfab.com/3d-models/mechanical-keyboard-aesthetic-44bb12d306864e2cb4256a61d4168942
+* author:	M.Reslan (https://sketchfab.com/mreslan)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "VortexSeries Mechanical Keyboard GT-8 / NJ80" (https://sketchfab.com/3d-models/vortexseries-mechanical-keyboard-gt-8-nj80-02d16e9dae72419aa24ec6788318f92b) by Rendy K (https://sketchfab.com/RendyK) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Mechanical Keyboard - Aesthetic" (https://sketchfab.com/3d-models/mechanical-keyboard-aesthetic-44bb12d306864e2cb4256a61d4168942) by M.Reslan (https://sketchfab.com/mreslan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

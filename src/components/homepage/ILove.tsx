@@ -1,8 +1,9 @@
 import type { FC } from 'react'
 import Link from 'next/link'
-import { Section } from '@ui/Section'
 
 import { ROUTES } from '@/lib/routes'
+
+import { Section } from '@ui/Section'
 
 export const ILove: FC = () => (
   <Section heading="I ♥">

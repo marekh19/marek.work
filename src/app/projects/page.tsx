@@ -1,10 +1,11 @@
 import { type Metadata } from 'next'
-import { apolloClient } from '@/services/apollo/apollo-client'
-import GetProjectItemsOverview from '@/services/apollo/queries/GetProjectItemsOverview.gql'
-import { InnerLayout } from '@ui/InnerLayout'
-import { Section } from '@ui/Section'
 
 import { type GetProjectItemsOverviewQuery } from '@/types/__generated__/graphql'
+import { apolloClient } from '@/services/apollo/apollo-client'
+import GetProjectItemsOverview from '@/services/apollo/queries/GetProjectItemsOverview.gql'
+
+import { InnerLayout } from '@ui/InnerLayout'
+import { Section } from '@ui/Section'
 import { ProjectCard } from '@/components/projects/ProjectCard'
 
 export const metadata: Metadata = {

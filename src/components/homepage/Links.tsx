@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react/dist/ssr'
+
 import { Section } from '@ui/Section'
 
 export const Links: FC = () => (

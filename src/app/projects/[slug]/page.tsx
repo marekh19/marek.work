@@ -1,13 +1,14 @@
 import { notFound } from 'next/navigation'
-import { apolloClient } from '@/services/apollo/apollo-client'
-import GetProjectItem from '@/services/apollo/queries/GetProjectItem.gql'
-import GetProjectItems from '@/services/apollo/queries/GetProjectItems.gql'
 
 import type {
   GetProjectItemQuery,
   GetProjectItemsQuery,
 } from '@/types/__generated__/graphql'
-import { Badge } from '@/components/ui/Badge'
+import { apolloClient } from '@/services/apollo/apollo-client'
+import GetProjectItem from '@/services/apollo/queries/GetProjectItem.gql'
+import GetProjectItems from '@/services/apollo/queries/GetProjectItems.gql'
+
+import { Badge } from '@ui/Badge'
 import ProjectDetail from '@/components/project-detail/ProjectDetail'
 
 export async function generateStaticParams() {

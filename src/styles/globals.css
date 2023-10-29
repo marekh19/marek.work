@@ -3,16 +3,24 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply box-border;
+  :root {
+    --text: 36 29% 10%;
+    --background: 0 0% 100%;
+    --primary: 215 28% 31%;
+    --secondary: 275 28% 88%;
+    --accent: 215 28% 48%;
   }
+  .dark {
+    --text: 36 29% 90%;
+    --background: 0 0% 0%;
+    --primary: 215 28% 69%;
+    --secondary: 275 28% 12%;
+    --accent: 215 28% 52%;
+  }
+}
 
+@layer base {
   body {
-    @apply bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-gray-50;
-    @apply min-h-screen;
-  }
-
-  ::selection {
-    @apply bg-indigo-500 text-white;
+    @apply bg-background text-text;
   }
 }
