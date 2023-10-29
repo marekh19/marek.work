@@ -1,10 +1,27 @@
 import { notFound } from 'next/navigation'
 import { apolloClient } from '@/services/apollo/apollo-client'
 import GetProjectItem from '@/services/apollo/queries/GetProjectItem.gql'
+import GetProjectItems from '@/services/apollo/queries/GetProjectItems.gql'
 
-import { type GetProjectItemQuery } from '@/types/__generated__/graphql'
+import type {
+  GetProjectItemQuery,
+  GetProjectItemsQuery,
+} from '@/types/__generated__/graphql'
 import { Badge } from '@/components/ui/Badge'
 import ProjectDetail from '@/components/project-detail/ProjectDetail'
+
+export async function generateStaticParams() {
+  const { data } = await apolloClient.query<GetProjectItemsQuery>({
+    query: GetProjectItems,
+    fetchPolicy: 'no-cache',
+  })
+  if (data.ProjectItems?.items) {
+    return data.ProjectItems.items.map(project => ({
+      slug: project?.slug,
+    }))
+  }
+  return []
+}
 
 export default async function ProjectDetailPage({
   params,
@@ -15,6 +32,7 @@ export default async function ProjectDetailPage({
   const { data } = await apolloClient.query<GetProjectItemQuery>({
     query: GetProjectItem,
     variables: { projectItemId: `projects/${slug}` },
+    fetchPolicy: 'no-cache',
   })
 
   if (!data.ProjectItem) notFound()
@@ -22,8 +40,6 @@ export default async function ProjectDetailPage({
   const {
     ProjectItem: { content: project },
   } = data
-
-  console.log({ project: project?.github_link })
 
   return (
     <ProjectDetail className="space-y-6">
@@ -37,5 +53,3 @@ export default async function ProjectDetailPage({
     </ProjectDetail>
   )
 }
-
-export const revalidate = 300

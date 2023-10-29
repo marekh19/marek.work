@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 export default async function Projects() {
   const { data } = await apolloClient.query<GetProjectItemsOverviewQuery>({
     query: GetProjectItemsOverview,
+    fetchPolicy: 'no-cache',
   })
 
   return (
@@ -34,5 +35,3 @@ export default async function Projects() {
     </InnerLayout>
   )
 }
-
-export const revalidate = 300
