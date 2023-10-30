@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import { ROUTES } from '@/lib/routes'
 import { cn } from '@/lib/utils'
 
-export const Nav: FC = () => {
+export const NavLinks: FC = () => {
   const path = usePathname()
 
   return (

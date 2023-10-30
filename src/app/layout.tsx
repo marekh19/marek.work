@@ -8,9 +8,9 @@ import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 
 import { Footer } from '@ui/Footer'
+import { Header } from '@ui/Header/Header'
 import { Keyboard } from '@ui/KeyboardModel'
 import { Providers } from '@/components/Providers'
-import { Header } from '@/components/ui/Header/Header'
 
 export const metadata: Metadata = {
   title: {

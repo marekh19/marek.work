@@ -42,7 +42,7 @@ export const Keyboard: FC = () => {
   return (
     <>
       {!isDetailPage && (
-        <div className="relative m-auto my-[-8rem] h-[26rem] w-full max-w-screen-lg px-6 sm:h-[36rem] sm:px-8">
+        <div className="relative m-auto my-[-8rem] h-[28rem] w-full max-w-screen-lg px-6 sm:h-[36rem] sm:px-8">
           <Canvas
             className="h-full w-full"
             onMouseEnter={() => setShouldRotate(false)}
