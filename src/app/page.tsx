@@ -18,7 +18,6 @@ export default async function HomePage() {
   })
 
   const elements = data.PageItem?.content?.blocks
-  console.log(JSON.stringify(elements, null, 2))
 
   return (
     <InnerLayout>

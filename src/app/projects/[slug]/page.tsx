@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import type {
@@ -11,6 +12,10 @@ import GetProjectItems from '@/services/apollo/queries/GetProjectItems.gql'
 import { Badge } from '@ui/Badge'
 import { InnerLayout } from '@ui/InnerLayout'
 import ProjectDetail from '@/components/project-detail/ProjectDetail'
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+}
 
 export async function generateStaticParams() {
   const { data } = await apolloClient.query<GetProjectItemsQuery>({
@@ -47,12 +52,17 @@ export default async function ProjectDetailPage({
     <InnerLayout>
       <ProjectDetail className="mx-auto max-w-[42.5rem] space-y-6">
         <ProjectDetail.Header name={project?.name} year={project?.year} />
-        {project?.work_in_progress && <Badge text="work in progress" />}
+        {project?.work_in_progress && (
+          <Badge text="Work in progress" className="text-base" />
+        )}
         <ProjectDetail.Description description={project?.description} />
         <ProjectDetail.Stack stack={project?.stack} />
         <ProjectDetail.Website link={project?.webiste_link} />
         <ProjectDetail.Github link={project?.github_link} />
-        <ProjectDetail.ImageGallery images={project?.images} />
+        <ProjectDetail.ImageGallery
+          images={project?.images}
+          className="!mt-10"
+        />
       </ProjectDetail>
     </InnerLayout>
   )

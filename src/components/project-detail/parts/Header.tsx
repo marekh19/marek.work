@@ -14,18 +14,17 @@ type Props = {
 
 export const Header: FC<Props> = ({ name, year, className }) => {
   return (
-    <div className={cn('flex items-center', className)}>
-      <Link
-        href={ROUTES.projects}
-        className="text-indigo-600 dark:text-indigo-400"
-      >
+    <div className={cn('flex items-center gap-x-2', className)}>
+      <Link href={ROUTES.projects} className="text-primary">
         Projects
       </Link>
-      <CaretRight className="mx-1 h-4" />
-      <h1 className="mr-2 text-xl font-medium sm:text-2xl">{name}</h1>
-      <h2 className="rounded-md bg-gray-300 p-1 text-xs font-bold dark:bg-gray-700">
-        {year}
-      </h2>
+      <CaretRight className="h-4 w-4" />
+      <div className="flex items-center gap-x-2">
+        <h1 className="text-xl font-medium sm:text-2xl">{name}</h1>
+        <time className="rounded-lg bg-accent/50 px-1.5 py-1 text-xs font-bold">
+          {year}
+        </time>
+      </div>
     </div>
   )
 }

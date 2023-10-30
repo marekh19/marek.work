@@ -21,7 +21,7 @@ export default async function ProjectsPage() {
   return (
     <InnerLayout>
       <Section name="Projects">
-        <div className="mt-2 grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2">
           {data.ProjectItems?.items?.map(project => (
             <ProjectCard
               name={project?.content?.name}

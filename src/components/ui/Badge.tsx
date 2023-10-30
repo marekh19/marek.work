@@ -10,7 +10,7 @@ type Props = {
 export const Badge: FC<Props> = ({ text, className }) => (
   <p
     className={cn(
-      'inline-block rounded-md bg-gray-300 p-1 font-semibold uppercase dark:bg-gray-700',
+      'inline-block rounded-lg bg-accent/50 px-1.5 py-1 text-sm font-bold',
       className
     )}
   >

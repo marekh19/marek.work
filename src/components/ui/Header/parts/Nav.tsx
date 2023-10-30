@@ -15,7 +15,7 @@ export const Nav: FC = () => {
       <Link
         href={ROUTES.projects}
         className={cn('hover:text-primary', {
-          'text-primary': path.includes(ROUTES.projects),
+          'text-accent': path.includes(ROUTES.projects),
         })}
       >
         Projects
@@ -23,7 +23,7 @@ export const Nav: FC = () => {
       <Link
         href={ROUTES.posts}
         className={cn('hover:text-primary', {
-          'text-primary': path.includes(ROUTES.posts),
+          'text-accent': path.includes(ROUTES.posts),
         })}
       >
         Posts

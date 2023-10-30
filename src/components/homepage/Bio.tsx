@@ -24,7 +24,7 @@ export const Bio: FC<Props> = ({ data }) => {
 
   return (
     <Section name={blockData.name}>
-      <ol className="relative space-y-8 border-l border-secondary">
+      <ol className="relative space-y-6 border-l border-secondary">
         {timeline.map(timelineItem => (
           <li key={timelineItem._uid} className="ml-4">
             <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-primary"></div>

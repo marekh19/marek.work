@@ -22,7 +22,7 @@ export const ImageGallery: FC<Props> = ({ images, className }) => {
 
   return (
     <div
-      className={cn('mx-auto flex w-full max-w-xl flex-col gap-5', className)}
+      className={cn('mx-auto flex w-full max-w-xl flex-col gap-6', className)}
     >
       {images.map(img => (
         <div className="relative w-full" key={img?.id}>
@@ -31,8 +31,8 @@ export const ImageGallery: FC<Props> = ({ images, className }) => {
             alt="Project screenshot"
             width="600"
             height="315"
-            className="w-full rounded-md"
-            quality={95}
+            sizes="576px"
+            className="w-full rounded-lg"
           />
         </div>
       ))}

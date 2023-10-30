@@ -2,6 +2,8 @@ import type { FC } from 'react'
 
 import { cn } from '@/lib/utils'
 
+import { Badge } from '@ui/Badge'
+
 type Props = {
   // TODO: fix this ugly type
   link:
@@ -18,12 +20,11 @@ export const Website: FC<Props> = ({ link, className }) => {
   if (!link?.url) return null
 
   return (
-    <div className={cn('flex items-center', className)}>
-      <h3 className="rounded-md bg-gray-300 p-1 text-xs font-bold uppercase dark:bg-gray-700">
-        Website
-      </h3>
+    <div className={cn('flex items-center space-x-4', className)}>
+      <Badge text="Website" />
+
       <a
-        className="ml-3 text-indigo-600 dark:text-indigo-400"
+        className="text-primary transition-colors duration-300 ease-in-out hover:text-primary/80"
         href={link.url}
         target="_blank"
         rel="noreferrer"
