@@ -12,7 +12,7 @@ type MeshComponentProps = {
 }
 
 const MeshComponent: FC<MeshComponentProps> = ({ shouldRotate }) => {
-  const fileUrl = '/models/keyboardModelMinified/scene.gltf'
+  const fileUrl = '/models/keyboardModel/scene.gltf'
   const mesh = useRef<Mesh>(null)
   const gltf = useLoader(GLTFLoader, fileUrl)
 
