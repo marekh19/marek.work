@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils'
 import { Footer } from '@ui/Footer'
 import { Header } from '@ui/Header/Header'
 import { Keyboard } from '@ui/KeyboardModel'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import { Providers } from '@/components/Providers'
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: Props) {
           fontDisplay.variable
         )}
       >
+        <GoogleAnalytics />
         <Providers>
           <Header />
           <Keyboard />
