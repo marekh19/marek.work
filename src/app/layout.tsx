@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils'
 import { Footer } from '@ui/Footer'
 import { Header } from '@ui/Header/Header'
 import { KeyboardCanvas } from '@ui/Keyboard/KeyboardCanvas'
-import { GoogleAnalytics } from '@/components/GoogleAnalytics'
+import { GoogleTagManager } from '@/components/GoogleTagManager'
 import { Providers } from '@/components/Providers'
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: Props) {
           fontDisplay.variable
         )}
       >
-        <GoogleAnalytics />
+        <GoogleTagManager />
         <Providers>
           <Header />
           <KeyboardCanvas />
