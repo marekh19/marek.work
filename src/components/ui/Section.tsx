@@ -9,7 +9,9 @@ type Props = {
 }
 
 export const Section: FC<Props> = ({ name, children, className }) => (
-  <section className={cn('mx-auto mt-12 w-full max-w-[42.5rem]', className)}>
+  <section
+    className={cn('mx-auto mt-12 w-full max-w-[42.5rem] sm:mt-16', className)}
+  >
     <h3 className="mb-4 inline-block border-b-4 border-accent font-display text-2xl">
       {name}
     </h3>

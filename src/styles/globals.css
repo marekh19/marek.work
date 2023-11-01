@@ -4,20 +4,21 @@
 
 @layer base {
   :root {
-    --text: 36 29% 10%;
-    --background: 0 0% 100%;
-    --primary: 215 28% 31%;
-    --secondary: 275 28% 88%;
-    --accent: 215 28% 48%;
+    --text: 200 9% 7%;
+    --background: 200 7% 92%;
+    --primary: 23 9% 28%;
+    --secondary: 84 8% 88%;
+    --accent: 22 9% 48%;
   }
 
   .dark {
-    --text: 36 29% 90%;
-    --background: 0 0% 0%;
-    --primary: 215 28% 69%;
-    --secondary: 275 28% 12%;
-    --accent: 215 28% 52%;
+    --text: 200 9% 93%;
+    --background: 200 7% 8%;
+    --primary: 23 9% 72%;
+    --secondary: 84 8% 12%;
+    --accent: 22 9% 52%;
   }
+
 
   .prose-accent-bullet li::marker {
     @apply text-accent;

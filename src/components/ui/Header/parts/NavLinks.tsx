@@ -14,8 +14,9 @@ export const NavLinks: FC = () => {
     <nav className="space-x-4 text-lg font-medium transition-colors duration-300 ease-in-out sm:space-x-6">
       <Link
         href={ROUTES.projects}
-        className={cn('hover:text-primary', {
-          'text-accent': path.includes(ROUTES.projects),
+        className={cn('hover:text-text', {
+          'text-primary/70': !path.includes(ROUTES.projects),
+          'text-text': path === ROUTES.home,
         })}
       >
         Projects
@@ -23,7 +24,8 @@ export const NavLinks: FC = () => {
       <Link
         href={ROUTES.posts}
         className={cn('hover:text-primary', {
-          'text-accent': path.includes(ROUTES.posts),
+          'text-primary/70': !path.includes(ROUTES.posts),
+          'text-text': path === ROUTES.home,
         })}
       >
         Posts
