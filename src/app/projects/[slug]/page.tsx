@@ -50,7 +50,7 @@ export default async function ProjectDetailPage({
 
   return (
     <InnerLayout>
-      <ProjectDetail className="mx-auto max-w-[42.5rem] space-y-6">
+      <ProjectDetail className="mx-auto mt-6 max-w-[42.5rem] space-y-6">
         <ProjectDetail.Header name={project?.name} year={project?.year} />
         {project?.work_in_progress && (
           <Badge text="Work in progress" className="text-base" />
