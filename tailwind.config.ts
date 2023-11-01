@@ -15,7 +15,7 @@ const config: Config = {
         accent: 'hsl(var(--accent))',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
+        sans: ['var(--font-geist-sans)', ...fontFamily.sans],
         display: ['var(--font-display)', ...fontFamily.sans],
       },
     },

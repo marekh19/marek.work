@@ -20,6 +20,7 @@
     "@react-three/fiber": "^8.15.8",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
+    "geist": "^1.0.0",
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
     "next": "14.0.0",
