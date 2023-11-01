@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils'
 
 import { Footer } from '@ui/Footer'
 import { Header } from '@ui/Header/Header'
-import { Keyboard } from '@ui/KeyboardModel'
+import { KeyboardCanvas } from '@ui/Keyboard/KeyboardCanvas'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import { Providers } from '@/components/Providers'
 
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: Props) {
         <GoogleAnalytics />
         <Providers>
           <Header />
-          <Keyboard />
+          <KeyboardCanvas />
           <main className="w-full grow">{children}</main>
           <Footer />
         </Providers>

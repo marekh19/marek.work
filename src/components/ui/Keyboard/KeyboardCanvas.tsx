@@ -1,40 +1,20 @@
 'use client'
 
-import { Suspense, useRef, useState, type FC } from 'react'
+import { useState, type FC } from 'react'
+import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
 import { OrbitControls } from '@react-three/drei'
-import { Canvas, useFrame, useLoader } from '@react-three/fiber'
-import type { Mesh } from 'three'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { Canvas } from '@react-three/fiber'
 
-type MeshComponentProps = {
-  shouldRotate: boolean
-}
+const KeyboardModel = dynamic(
+  () => import('@ui/Keyboard/KeyboardModel').then(model => model.KeyboardModel),
+  {
+    ssr: false,
+    loading: () => null,
+  }
+)
 
-const MeshComponent: FC<MeshComponentProps> = ({ shouldRotate }) => {
-  const fileUrl = '/models/keyboardModel/scene.gltf'
-  const mesh = useRef<Mesh>(null)
-  const gltf = useLoader(GLTFLoader, fileUrl)
-
-  useFrame(() => {
-    if (mesh.current && shouldRotate) {
-      mesh.current.rotation.y += 0.003
-    }
-  })
-
-  return (
-    <mesh ref={mesh}>
-      <primitive
-        object={gltf.scene}
-        scale={2}
-        position={[3, 0, 0]}
-        rotation={[0.9, 0, 0]}
-      />
-    </mesh>
-  )
-}
-
-export const Keyboard: FC = () => {
+export const KeyboardCanvas: FC = () => {
   const path = usePathname()
   const isDetailPage = path.includes('projects/') || path.includes('posts/')
   const [shouldRotate, setShouldRotate] = useState(true)
@@ -57,9 +37,7 @@ export const Keyboard: FC = () => {
               penumbra={1}
               intensity={500}
             />
-            <Suspense fallback={null}>
-              <MeshComponent shouldRotate={shouldRotate} />
-            </Suspense>
+            <KeyboardModel shouldRotate={shouldRotate} />
           </Canvas>
         </div>
       )}
