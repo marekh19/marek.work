@@ -3,8 +3,10 @@
 import type { FC } from 'react'
 import Script from 'next/script'
 
+import { env } from '@/env.mjs'
+
 export const GoogleTagManager: FC = () => {
-  const gtmId = process.env.NEXT_PUBLIC_GOOGLE_GTM
+  const gtmId = env.NEXT_PUBLIC_GOOGLE_GTM
 
   return (
     <Script id="google-tag-manager" strategy="afterInteractive">

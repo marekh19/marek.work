@@ -1,11 +1,13 @@
 import { revalidatePath } from 'next/cache'
 import type { NextRequest } from 'next/server'
 
+import { env } from '@/env.mjs'
+
 export async function POST(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
     const secret = searchParams.get('secret')
-    if (secret !== process.env.STORYBLOK_WEBHOOK_SECRET) {
+    if (secret !== env.STORYBLOK_WEBHOOK_SECRET) {
       return Response.json(
         { revalidated: false, message: 'Invalid secret' },
         { status: 401 }
