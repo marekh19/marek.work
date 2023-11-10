@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   title: 'Not found',
 }
 
+// TODO: Check how to properly make a not found page when working with groupped routes
+
 export default function NotFound() {
   return (
     <InnerLayout>

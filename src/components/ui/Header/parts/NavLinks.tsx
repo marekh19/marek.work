@@ -11,22 +11,28 @@ export const NavLinks: FC = () => {
   const path = usePathname()
 
   return (
-    <nav className="space-x-4 text-lg font-medium transition-colors duration-300 ease-in-out sm:space-x-6">
+    <nav className="space-x-4 text-lg font-medium sm:space-x-6">
       <Link
         href={ROUTES.projects}
-        className={cn('hover:text-text', {
-          'text-primary/70': !path.includes(ROUTES.projects),
-          'text-text': path === ROUTES.home,
-        })}
+        className={cn(
+          'transition-colors duration-300 ease-in-out hover:text-primary',
+          {
+            'text-primary/70': !path.includes(ROUTES.projects),
+            'text-text': path === ROUTES.home,
+          }
+        )}
       >
         Projects
       </Link>
       <Link
         href={ROUTES.posts}
-        className={cn('hover:text-primary', {
-          'text-primary/70': !path.includes(ROUTES.posts),
-          'text-text': path === ROUTES.home,
-        })}
+        className={cn(
+          'transition-colors duration-300 ease-in-out hover:text-primary',
+          {
+            'text-primary/70': !path.includes(ROUTES.posts),
+            'text-text': path === ROUTES.home,
+          }
+        )}
       >
         Posts
       </Link>

@@ -22,6 +22,7 @@ module.exports = {
     '^@/lib/(.*)$',
     '^@/types/(.*)$',
     '^@/services/(.*)$',
+    '^@/sanity/(.*)$',
     '^@/utils/(.*)$',
     '^@/hooks/(.*)$',
     '^@/assets/(.*)$',

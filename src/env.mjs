@@ -11,6 +11,7 @@ export const env = createEnv({
     STORYBLOK_GQL_URL: z.string().url(),
     STORYBLOK_GQL_TOKEN: z.string().min(1),
     STORYBLOK_WEBHOOK_SECRET: z.string().min(1),
+    SANITY_REVALIDATE_SECRET: z.string().min(1),
   },
   /*
    * Environment variables available on the client (and server).
@@ -19,6 +20,9 @@ export const env = createEnv({
    */
   client: {
     NEXT_PUBLIC_GOOGLE_GTM: z.string().min(1),
+    NEXT_PUBLIC_SANITY_PROJECT_ID: z.string().min(1),
+    NEXT_PUBLIC_SANITY_DATASET: z.string().min(1),
+    NEXT_PUBLIC_SANITY_API_VERSION: z.string().min(1),
   },
   /*
    * Due to how Next.js bundles environment variables on Edge and Client,
@@ -31,5 +35,9 @@ export const env = createEnv({
     STORYBLOK_GQL_TOKEN: process.env.STORYBLOK_GQL_TOKEN,
     STORYBLOK_WEBHOOK_SECRET: process.env.STORYBLOK_WEBHOOK_SECRET,
     NEXT_PUBLIC_GOOGLE_GTM: process.env.NEXT_PUBLIC_GOOGLE_GTM,
+    NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
+    NEXT_PUBLIC_SANITY_API_VERSION: process.env.NEXT_PUBLIC_SANITY_API_VERSION,
+    SANITY_REVALIDATE_SECRET: process.env.SANITY_REVALIDATE_SECRET,
   },
 })

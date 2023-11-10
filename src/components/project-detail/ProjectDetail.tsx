@@ -2,14 +2,7 @@ import type { ReactNode } from 'react'
 
 import { cn } from '@/lib/utils'
 
-import {
-  Description,
-  Github,
-  Header,
-  ImageGallery,
-  Stack,
-  Website,
-} from './parts'
+import { Content, Github, Header, ImageGallery, Stack, Website } from './parts'
 
 type Props = {
   children: ReactNode
@@ -21,7 +14,7 @@ const ProjectDetail = ({ children, className }: Props) => (
 )
 
 ProjectDetail.Header = Header
-ProjectDetail.Description = Description
+ProjectDetail.Content = Content
 ProjectDetail.Stack = Stack
 ProjectDetail.Website = Website
 ProjectDetail.Github = Github

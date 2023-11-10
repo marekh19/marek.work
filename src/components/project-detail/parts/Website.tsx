@@ -5,14 +5,11 @@ import { cn } from '@/lib/utils'
 import { Badge } from '@ui/Badge'
 
 type Props = {
-  // TODO: fix this ugly type
-  link:
-    | {
-        __typename?: 'Link' | undefined
-        url: string
-      }
-    | null
-    | undefined
+  link: {
+    url: string
+    title: string
+    [key: string]: string
+  } | null
   className?: string
 }
 
@@ -29,7 +26,7 @@ export const Website: FC<Props> = ({ link, className }) => {
         target="_blank"
         rel="noreferrer"
       >
-        {link.url}
+        {link.title}
       </a>
     </div>
   )

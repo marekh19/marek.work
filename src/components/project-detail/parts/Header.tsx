@@ -4,18 +4,20 @@ import { CaretRight } from '@phosphor-icons/react/dist/ssr'
 
 import { ROUTES } from '@/lib/routes'
 import { cn } from '@/lib/utils'
-import { type Maybe } from '@/types/__generated__/graphql'
 
 type Props = {
-  name?: Maybe<string>
-  year?: Maybe<string>
+  name: string
+  year: string
   className?: string
 }
 
 export const Header: FC<Props> = ({ name, year, className }) => {
   return (
     <div className={cn('flex items-center gap-x-2', className)}>
-      <Link href={ROUTES.projects} className="text-primary">
+      <Link
+        href={ROUTES.projects}
+        className="text-primary duration-300 ease-in-out hover:text-text"
+      >
         Projects
       </Link>
       <CaretRight className="h-4 w-4" />

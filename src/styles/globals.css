@@ -19,7 +19,6 @@
     --accent: 22 9% 52%;
   }
 
-
   .prose-accent-bullet li::marker {
     @apply text-accent;
   }

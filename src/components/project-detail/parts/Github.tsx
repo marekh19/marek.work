@@ -6,19 +6,12 @@ import { cn } from '@/lib/utils'
 import { Badge } from '@ui/Badge'
 
 type Props = {
-  // TODO: fix this ugly type
-  link:
-    | {
-        __typename?: 'Link' | undefined
-        url: string
-      }
-    | null
-    | undefined
+  link: {
+    url: string
+    title: string
+    [key: string]: string
+  } | null
   className?: string
-}
-
-const getGithubRepoPath = (url: string) => {
-  return url.replace('https://github.com/', '')
 }
 
 export const Github: FC<Props> = ({ link, className }) => {
@@ -34,7 +27,7 @@ export const Github: FC<Props> = ({ link, className }) => {
         rel="noreferrer"
       >
         <GithubLogo className="h-5 w-5" />
-        <span className="ml-1">{getGithubRepoPath(link.url)}</span>
+        <span className="ml-1">{link.title}</span>
       </a>
     </div>
   )

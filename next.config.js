@@ -17,6 +17,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: '*.storyblok.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
     ],
   },
 }

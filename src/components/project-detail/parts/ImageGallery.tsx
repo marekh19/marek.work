@@ -4,16 +4,13 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 type Props = {
-  // TODO: fix this ugly type
   images:
-    | ({
-        __typename?: 'Asset' | undefined
-        id?: number | null | undefined
-        name?: string | null | undefined
-        filename: string
-      } | null)[]
+    | {
+        url: string
+        alt: string
+        _key: string
+      }[]
     | null
-    | undefined
   className?: string
 }
 
@@ -25,9 +22,9 @@ export const ImageGallery: FC<Props> = ({ images, className }) => {
       className={cn('mx-auto flex w-full max-w-xl flex-col gap-6', className)}
     >
       {images.map(img => (
-        <div className="relative w-full" key={img?.id}>
+        <div className="relative w-full" key={img?._key}>
           <Image
-            src={img?.filename ?? ''}
+            src={img.url}
             alt="Project screenshot"
             width="600"
             height="315"

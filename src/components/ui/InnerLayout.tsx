@@ -21,7 +21,7 @@ export const InnerLayout: FC<Props> = ({ children }) => {
       exit="exit"
       variants={variants}
       transition={{ duration: 0.4, type: 'easeInOut' }}
-      className="relative mx-auto h-full w-full max-w-screen-xl px-6 sm:px-8"
+      className="relative mx-auto h-full w-full max-w-screen-lg px-6 sm:px-8"
     >
       {children}
     </motion.div>

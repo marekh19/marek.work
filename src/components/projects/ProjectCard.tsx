@@ -21,14 +21,17 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   if (name && description && imagePath && slug) {
     return (
       <Link href={ROUTES.projectDetail(slug)}>
-        <article title={name}>
+        <article
+          title={name}
+          className="transition duration-300 hover:scale-105"
+        >
           <div className="relative w-full">
             <Image
               src={imagePath}
               alt={name}
               width="600"
               height="315"
-              sizes="324px"
+              sizes="464px"
               className="w-full rounded-lg"
             />
           </div>
