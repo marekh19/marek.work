@@ -1,11 +1,12 @@
 import { groq } from 'next-sanity'
 import { z } from 'zod'
 
-import { sanityFetch } from '@/sanity/sanityClient'
+import { sanityFetch } from '@/sanity/sanity.client'
 
-const query = groq`*[_type == "project"] {
+const query = groq`*[_type == "project"] | order(order asc) {
   _id,
-  name,
+  _type,
+  title,
   "slug": slug.current,
   summary,
   "thumbnail": {
@@ -14,20 +15,21 @@ const query = groq`*[_type == "project"] {
   },
 }`
 
-const getAllProjectsSchema = z
-  .array(
-    z.object({
-      _id: z.string(),
-      name: z.string(),
-      slug: z.string(),
-      summary: z.string(),
-      thumbnail: z.object({
-        url: z.string(),
-        alt: z.string(),
-      }),
-    })
-  )
-  .nullable()
+const projectSchema = z.object({
+  _id: z.string(),
+  _type: z.literal('project'),
+  title: z.string(),
+  slug: z.string(),
+  summary: z.string(),
+  thumbnail: z.object({
+    url: z.string(),
+    alt: z.string(),
+  }),
+})
+
+const getAllProjectsSchema = z.array(projectSchema).nullable()
+
+export type Project = z.infer<typeof projectSchema>
 
 export const getAllProjects = async () => {
   const projects = await sanityFetch({ query, tags: ['projects'] })

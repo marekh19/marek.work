@@ -1,20 +1,20 @@
 import type { FC } from 'react'
 
+import { type TextSection } from '@/types/cms-content'
+
 import { Markdown } from '@ui/Markdown'
 import { Section } from '@ui/Section'
 
 type Props = {
-  // TODO: fix types
-  data: any[]
+  data: TextSection
 }
 
 export const ILove: FC<Props> = ({ data }) => {
-  const blockData = data.filter(block => block.name === 'I ❤️').at(0)
-  if (!blockData) return null
+  if (!data) return null
 
   return (
-    <Section name={blockData.name}>
-      <Markdown content={blockData.content} />
+    <Section name={data.heading}>
+      <Markdown content={data.content} />
     </Section>
   )
 }

@@ -1,13 +1,13 @@
 import { defineField, defineType } from 'sanity'
 
-const project = defineType({
+export const project = defineType({
   title: 'Projects',
   name: 'project',
   type: 'document',
   fields: [
     defineField({
-      title: 'Name',
-      name: 'name',
+      title: 'Title',
+      name: 'title',
       type: 'string',
       validation: Rule => Rule.required(),
     }),
@@ -15,8 +15,13 @@ const project = defineType({
       title: 'Slug',
       name: 'slug',
       type: 'slug',
-      options: { source: 'name' },
+      options: { source: 'title' },
       validation: Rule => Rule.required(),
+    }),
+    defineField({
+      title: 'Order',
+      name: 'order',
+      type: 'number',
     }),
     defineField({
       title: 'Year',
@@ -95,5 +100,3 @@ const project = defineType({
     }),
   ],
 })
-
-export default project

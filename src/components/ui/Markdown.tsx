@@ -2,10 +2,9 @@ import type { FC } from 'react'
 import ReactMarkdown from 'react-markdown'
 
 import { cn } from '@/lib/utils'
-import { type Maybe } from '@/types/__generated__/graphql'
 
 type Props = {
-  content?: Maybe<string>
+  content?: string | null
   className?: string
 }
 

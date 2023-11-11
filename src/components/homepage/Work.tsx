@@ -3,23 +3,22 @@ import Link from 'next/link'
 import { ArrowRight } from '@phosphor-icons/react/dist/ssr'
 
 import { ROUTES } from '@/lib/routes'
+import { type TextSection } from '@/types/cms-content'
 
 import { Button } from '@ui/Button'
 import { Markdown } from '@ui/Markdown'
 import { Section } from '@ui/Section'
 
 type Props = {
-  // TODO: fix types
-  data: any[]
+  data: TextSection
 }
 
 export const Work: FC<Props> = ({ data }) => {
-  const blockData = data.filter(block => block.name === 'Work').at(0)
-  if (!blockData) return null
+  if (!data) return null
 
   return (
-    <Section name={blockData.name}>
-      <Markdown content={blockData.content} className="text-justify" />
+    <Section name={data.heading}>
+      <Markdown content={data.content} className="text-justify" />
       <Link href={ROUTES.projects}>
         <Button className="mx-auto mt-6 gap-x-2" accent="secondary">
           <span>My portfolio</span>

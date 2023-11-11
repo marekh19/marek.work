@@ -1,5 +1,5 @@
 export { Github } from './Github'
-export { Content } from './Content'
+export { Content } from '@ui/Content'
 export { Header } from './Header'
 export { Stack } from './Stack'
 export { Website } from './Website'

@@ -1,7 +1,0 @@
-query GetPageItem($pageItemId: ID!) {
-  PageItem(id: $pageItemId) {
-    content {
-      blocks
-    }
-  }
-}

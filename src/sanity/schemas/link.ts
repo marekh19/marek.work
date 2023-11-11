@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity'
 
-const link = defineType({
+export const link = defineType({
   title: 'Links',
   name: 'link',
   type: 'object',
@@ -19,5 +19,3 @@ const link = defineType({
     }),
   ],
 })
-
-export default link

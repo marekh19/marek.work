@@ -8,9 +8,6 @@ export const env = createEnv({
    * Will throw if you access these variables on the client.
    */
   server: {
-    STORYBLOK_GQL_URL: z.string().url(),
-    STORYBLOK_GQL_TOKEN: z.string().min(1),
-    STORYBLOK_WEBHOOK_SECRET: z.string().min(1),
     SANITY_REVALIDATE_SECRET: z.string().min(1),
   },
   /*
@@ -31,9 +28,6 @@ export const env = createEnv({
    * 💡 You'll get type errors if not all variables from `server` & `client` are included here.
    */
   runtimeEnv: {
-    STORYBLOK_GQL_URL: process.env.STORYBLOK_GQL_URL,
-    STORYBLOK_GQL_TOKEN: process.env.STORYBLOK_GQL_TOKEN,
-    STORYBLOK_WEBHOOK_SECRET: process.env.STORYBLOK_WEBHOOK_SECRET,
     NEXT_PUBLIC_GOOGLE_GTM: process.env.NEXT_PUBLIC_GOOGLE_GTM,
     NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
     NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,

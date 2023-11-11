@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity'
 
-const stack = defineType({
+export const stack = defineType({
   title: 'Stacks',
   name: 'stack',
   type: 'document',

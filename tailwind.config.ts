@@ -18,6 +18,9 @@ const config: Config = {
         sans: ['var(--font-geist-sans)', ...fontFamily.sans],
         display: ['var(--font-display)', ...fontFamily.sans],
       },
+      aspectRatio: {
+        '2/1': '2 / 1',
+      },
     },
   },
   plugins: [typography],

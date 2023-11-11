@@ -1,11 +1,11 @@
 import { groq } from 'next-sanity'
 import { z } from 'zod'
 
-import { sanityFetch } from '@/sanity/sanityClient'
+import { sanityFetch } from '@/sanity/sanity.client'
 
 const query = groq`*[_type == "project" && slug.current == $slug][0] {
   _id,
-  name,
+  title,
   year,
   work_in_progress,
   "thumbnail": {
@@ -29,7 +29,7 @@ const query = groq`*[_type == "project" && slug.current == $slug][0] {
 const getProjectSchema = z
   .object({
     _id: z.string(),
-    name: z.string(),
+    title: z.string(),
     year: z.string(),
     work_in_progress: z.boolean(),
     thumbnail: z.object({
