@@ -1,4 +1,4 @@
-import { revalidatePath } from 'next/cache'
+import { revalidateTag } from 'next/cache'
 import { NextResponse, type NextRequest } from 'next/server'
 import { parseBody } from 'next-sanity/webhook'
 
@@ -26,17 +26,8 @@ export async function POST(req: NextRequest) {
       return new Response(JSON.stringify({ message, body }), { status: 400 })
     }
 
-    // If the `_type` is `page`, then all `client.fetch` calls with
-    // `{next: {tags: ['page']}}` will be revalidated
-    if (body._type === 'homepage') {
-      revalidatePath('/', 'page')
-      console.log('REVALIDATE: revalidating homepage')
-    } else {
-      revalidatePath(`/${body._type}s/[slug]`, 'page')
-      console.log(`REVALIDATE: revalidating /${body._type}s/[slug]`)
-      revalidatePath(`/${body._type}s`, 'page')
-      console.log(`REVALIDATE: revalidating /${body._type}s`)
-    }
+    console.log('REVALIDATE: TAG = ', body._type)
+    revalidateTag(body._type)
     console.log('REVALIDATE: should be revalidated')
 
     return NextResponse.json({ body })

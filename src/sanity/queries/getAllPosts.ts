@@ -34,6 +34,6 @@ const getAllPostsSchema = z.array(postSchema).nullable()
 export type Post = z.infer<typeof postSchema>
 
 export const getAllPosts = async () => {
-  const posts = await sanityFetch({ query })
+  const posts = await sanityFetch({ query, tags: ['post'] })
   return getAllPostsSchema.parse(posts)
 }

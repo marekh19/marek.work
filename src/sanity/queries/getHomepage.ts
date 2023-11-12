@@ -48,6 +48,6 @@ const getHomepageSchema = z.object({
 })
 
 export const getHomepage = async () => {
-  const homepage = await sanityFetch({ query })
+  const homepage = await sanityFetch({ query, tags: ['homepage'] })
   return getHomepageSchema.parse(homepage)
 }
