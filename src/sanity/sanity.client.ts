@@ -28,7 +28,6 @@ export async function sanityFetch<QueryResponse>({
   tags: string[]
 }): Promise<QueryResponse> {
   return sanityClient.fetch<QueryResponse>(query, params, {
-    cache: 'force-cache',
     next: { tags },
   })
 }
