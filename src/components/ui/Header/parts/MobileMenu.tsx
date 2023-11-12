@@ -4,6 +4,7 @@ import { type FC } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useMobileMenuStore } from '@/stores/useMobileMenuStore'
+import { Cube, Note } from '@phosphor-icons/react/dist/ssr'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import { ROUTES } from '@/lib/routes'
@@ -39,22 +40,24 @@ export const MobileMenu: FC<Props> = ({ className }) => {
                 <Link
                   href={ROUTES.projects}
                   onClick={closeMenu}
-                  className={cn('text-3xl', {
+                  className={cn('flex items-center gap-x-2 text-3xl', {
                     'text-primary/70': !path.includes(ROUTES.projects),
                     'text-text': path === ROUTES.home,
                   })}
                 >
-                  Projects
+                  <Cube className="h-6 w-6" />
+                  <span>Projects</span>
                 </Link>
                 <Link
                   href={ROUTES.posts}
                   onClick={closeMenu}
-                  className={cn('text-3xl', {
+                  className={cn('flex items-center gap-x-2 text-3xl', {
                     'text-primary/70': !path.includes(ROUTES.posts),
                     'text-text': path === ROUTES.home,
                   })}
                 >
-                  Posts
+                  <Note className="h-6 w-6" />
+                  <span>Posts</span>
                 </Link>
               </nav>
             </div>
