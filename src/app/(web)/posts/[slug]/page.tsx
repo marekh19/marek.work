@@ -7,8 +7,17 @@ import { getPost } from '@/sanity/queries/getPost'
 import { InnerLayout } from '@ui/InnerLayout'
 import PostDetail from '@/components/post-detail/PostDetail'
 
-export const metadata: Metadata = {
-  title: 'Blog',
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const { slug } = params
+  const post = await getPost(slug)
+
+  return {
+    title: post?.title,
+  }
 }
 
 export async function generateStaticParams() {

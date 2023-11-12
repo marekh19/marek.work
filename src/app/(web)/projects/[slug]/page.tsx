@@ -8,8 +8,17 @@ import { Badge } from '@ui/Badge'
 import { InnerLayout } from '@ui/InnerLayout'
 import ProjectDetail from '@/components/project-detail/ProjectDetail'
 
-export const metadata: Metadata = {
-  title: 'Portfolio',
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const { slug } = params
+  const project = await getProject(slug)
+
+  return {
+    title: project?.title,
+  }
 }
 
 export async function generateStaticParams() {
