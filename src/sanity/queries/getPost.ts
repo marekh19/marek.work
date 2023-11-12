@@ -29,7 +29,7 @@ export const getPost = async (slug: string) => {
   const post = await sanityFetch({
     query,
     params: { slug },
-    tags: ['post', slug],
+    tags: [slug],
   })
   return getPostSchema.parse(post)
 }
