@@ -16,7 +16,7 @@ export const KeyboardModel: FC<Props> = ({ shouldRotate }) => {
 
   useFrame(() => {
     if (mesh.current && shouldRotate) {
-      mesh.current.rotation.y += 0.003
+      mesh.current.rotation.y += 0.004
     }
   })
 
@@ -25,7 +25,7 @@ export const KeyboardModel: FC<Props> = ({ shouldRotate }) => {
       <primitive
         object={gltf.scene}
         scale={2}
-        position={[3, 0, 0]}
+        position={[3, -0.25, 0]}
         rotation={[0.9, 0, 0]}
       />
     </mesh>

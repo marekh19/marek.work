@@ -18,7 +18,7 @@ export const Work: FC<Props> = ({ data }) => {
 
   return (
     <Section name={data.heading}>
-      <Markdown content={data.content} className="text-justify" />
+      <Markdown content={data.content} className="md:text-justify" />
       <Link href={ROUTES.projects}>
         <Button className="mx-auto mt-6 gap-x-2" accent="secondary">
           <span>My portfolio</span>

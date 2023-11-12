@@ -14,7 +14,7 @@ export const Background: FC<Props> = ({ data }) => {
 
   return (
     <Section name={data.heading}>
-      <Markdown content={data.content} className="text-justify" />
+      <Markdown content={data.content} className="md:text-justify" />
     </Section>
   )
 }
