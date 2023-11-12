@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useMobileMenuStore } from '@/stores/useMobileMenuStore'
 import { Cube, Note } from '@phosphor-icons/react/dist/ssr'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useLockedBody } from 'usehooks-ts'
 
 import { ROUTES } from '@/lib/routes'
 import { cn } from '@/lib/utils'
@@ -20,6 +21,8 @@ export const MobileMenu: FC<Props> = ({ className }) => {
   const path = usePathname()
   const isOpen = useMobileMenuStore(state => state.isOpen)
   const closeMenu = useMobileMenuStore(state => state.close)
+
+  useLockedBody(isOpen, 'root')
 
   return (
     <AnimatePresence>

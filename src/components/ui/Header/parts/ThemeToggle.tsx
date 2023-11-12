@@ -43,7 +43,10 @@ export const ThemeToggle: FC<Props> = ({ isMobile, className }) => {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className={cn('ml-2', className)}
+        className={cn(className, {
+          'ml-2': !isMobile,
+          'mb-12': isMobile,
+        })}
       >
         {isDarkTheme ? (
           <Sun
