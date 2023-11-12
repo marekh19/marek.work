@@ -7,11 +7,17 @@ import { usePathname } from 'next/navigation'
 import { ROUTES } from '@/lib/routes'
 import { cn } from '@/lib/utils'
 
-export const NavLinks: FC = () => {
+type Props = {
+  className?: string
+}
+
+export const NavLinks: FC<Props> = ({ className }) => {
   const path = usePathname()
 
   return (
-    <nav className="space-x-4 text-lg font-medium sm:space-x-6">
+    <nav
+      className={cn('space-x-4 text-lg font-medium sm:space-x-6', className)}
+    >
       <Link
         href={ROUTES.projects}
         className={cn(

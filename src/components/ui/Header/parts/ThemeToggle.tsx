@@ -6,7 +6,14 @@ import { Moon, Sun } from '@phosphor-icons/react/dist/ssr'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 
-export const ThemeToggle: FC = () => {
+import { cn } from '@/lib/utils'
+
+type Props = {
+  isMobile?: boolean
+  className?: string
+}
+
+export const ThemeToggle: FC<Props> = ({ isMobile, className }) => {
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === 'system' ? systemTheme : theme
   const [isMounted, setIsMounted] = useState(false)
@@ -19,8 +26,12 @@ export const ThemeToggle: FC = () => {
 
   if (!isMounted) {
     return (
-      <div>
-        <Sun className="h-6 w-6 text-gray-500" />
+      <div className={className}>
+        <Sun
+          className={cn('ml-2 h-6 w-6 text-gray-500', {
+            'h-9 w-9': isMobile,
+          })}
+        />
       </div>
     )
   }
@@ -32,18 +43,24 @@ export const ThemeToggle: FC = () => {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="ml-2"
+        className={cn('ml-2', className)}
       >
         {isDarkTheme ? (
           <Sun
-            className="h-6 w-6 text-text transition duration-300 ease-in-out hover:text-yellow-500"
+            className={cn(
+              'h-6 w-6 text-text transition duration-300 ease-in-out hover:text-yellow-500',
+              { 'h-9 w-9': isMobile }
+            )}
             role="button"
             onClick={() => setTheme('light')}
             aria-label="Switch to light theme"
           />
         ) : (
           <Moon
-            className="h-6 w-6 text-text transition duration-300 ease-in-out hover:text-yellow-500"
+            className={cn(
+              'h-6 w-6 text-text transition duration-300 ease-in-out hover:text-yellow-500',
+              { 'h-9 w-9': isMobile }
+            )}
             role="button"
             onClick={() => setTheme('dark')}
             aria-label="Switch to dark theme"
