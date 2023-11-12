@@ -32,6 +32,6 @@ const getAllProjectsSchema = z.array(projectSchema).nullable()
 export type Project = z.infer<typeof projectSchema>
 
 export const getAllProjects = async () => {
-  const projects = await sanityFetch({ query, tags: ['project'] })
+  const projects = await sanityFetch({ query })
   return getAllProjectsSchema.parse(projects)
 }

@@ -16,18 +16,13 @@ const sanityClient = createClient({
 })
 
 const DEFAULT_PARAMS = {} as QueryParams
-const DEFAULT_TAGS = [] as string[]
 
 export async function sanityFetch<QueryResponse>({
   query,
   params = DEFAULT_PARAMS,
-  tags = DEFAULT_TAGS,
 }: {
   query: string
   params?: QueryParams
-  tags: string[]
 }): Promise<QueryResponse> {
-  return sanityClient.fetch<QueryResponse>(query, params, {
-    next: { tags },
-  })
+  return sanityClient.fetch<QueryResponse>(query, params)
 }

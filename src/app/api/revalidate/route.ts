@@ -1,4 +1,4 @@
-import { revalidateTag } from 'next/cache'
+import { revalidatePath } from 'next/cache'
 import { NextResponse, type NextRequest } from 'next/server'
 import { parseBody } from 'next-sanity/webhook'
 
@@ -9,6 +9,7 @@ export async function POST(req: NextRequest) {
     console.log('REVALIDATE: triggered')
     const { isValidSignature, body } = await parseBody<{
       _type: string
+      slug: string
     }>(req, env.SANITY_REVALIDATE_SECRET)
 
     if (!isValidSignature) {
@@ -27,7 +28,13 @@ export async function POST(req: NextRequest) {
 
     // If the `_type` is `page`, then all `client.fetch` calls with
     // `{next: {tags: ['page']}}` will be revalidated
-    revalidateTag(body._type)
+    if (body._type === 'homepage') {
+      revalidatePath('/')
+      console.log('REVALIDATE: revalidating homepage')
+    } else {
+      console.log(`REVALIDATE: revalidating /${body._type}s/${body.slug}`)
+      revalidatePath(`/${body._type}s/${body.slug}`)
+    }
     console.log('REVALIDATE: should be revalidated')
 
     return NextResponse.json({ body })
