@@ -29,7 +29,7 @@ export const ImageGallery: FC<Props> = ({ images, className }) => {
             width="600"
             height="315"
             sizes="576px"
-            className="w-full rounded-lg"
+            className="w-full rounded-lg border-2 border-text/20 object-cover"
           />
         </div>
       ))}
