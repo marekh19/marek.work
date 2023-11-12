@@ -73,7 +73,7 @@ export const getProject = async (slug: string) => {
   const project = await sanityFetch({
     query,
     params: { slug },
-    tags: [slug],
+    tags: ['project', slug],
   })
   return getProjectSchema.parse(project)
 }
