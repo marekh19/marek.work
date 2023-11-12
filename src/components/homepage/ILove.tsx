@@ -1,0 +1,20 @@
+import type { FC } from 'react'
+
+import { type TextSection } from '@/types/cms-content'
+
+import { Markdown } from '@ui/Markdown'
+import { Section } from '@ui/Section'
+
+type Props = {
+  data: TextSection
+}
+
+export const ILove: FC<Props> = ({ data }) => {
+  if (!data) return null
+
+  return (
+    <Section name={data.heading}>
+      <Markdown content={data.content} />
+    </Section>
+  )
+}

@@ -3,16 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply box-border;
+  :root {
+    --text: 200 9% 7%;
+    --background: 200 7% 92%;
+    --primary: 23 9% 28%;
+    --secondary: 84 8% 88%;
+    --accent: 22 9% 48%;
   }
 
+  .dark {
+    --text: 200 9% 93%;
+    --background: 200 7% 8%;
+    --primary: 23 9% 72%;
+    --secondary: 84 8% 12%;
+    --accent: 22 9% 52%;
+  }
+
+  .prose-accent-bullet li::marker {
+    @apply text-accent;
+  }
+}
+
+@layer base {
   body {
-    @apply bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-gray-50;
-    @apply min-h-screen;
-  }
-
-  ::selection {
-    @apply bg-indigo-500 text-white;
+    @apply bg-background text-text;
   }
 }

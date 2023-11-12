@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -12,14 +12,21 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "sourceMap": true,
+    "inlineSources": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "~/*": ["./src/*"],
-      "@ui/*": ["./src/features/ui/components/*"]
-    }
+      "@/*": ["./*"],
+      "@ui/*": ["./components/ui/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
