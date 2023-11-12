@@ -29,11 +29,13 @@ export async function POST(req: NextRequest) {
     // If the `_type` is `page`, then all `client.fetch` calls with
     // `{next: {tags: ['page']}}` will be revalidated
     if (body._type === 'homepage') {
-      revalidatePath('/')
+      revalidatePath('/', 'page')
       console.log('REVALIDATE: revalidating homepage')
     } else {
-      console.log(`REVALIDATE: revalidating /${body._type}s/${body.slug}`)
-      revalidatePath(`/${body._type}s/${body.slug}`)
+      revalidatePath(`/${body._type}s/[slug]`, 'page')
+      console.log(`REVALIDATE: revalidating /${body._type}s/[slug]`)
+      revalidatePath(`/${body._type}s`, 'page')
+      console.log(`REVALIDATE: revalidating /${body._type}s`)
     }
     console.log('REVALIDATE: should be revalidated')
 
