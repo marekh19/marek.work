@@ -8,6 +8,7 @@ const query = groq`*[_type == "project"] | order(order asc) {
   _type,
   title,
   "slug": slug.current,
+  work_in_progress,
   summary,
   "thumbnail": {
     "url": thumbnail.asset->url,
@@ -20,6 +21,7 @@ const projectSchema = z.object({
   _type: z.literal('project'),
   title: z.string(),
   slug: z.string(),
+  work_in_progress: z.boolean(),
   summary: z.string(),
   thumbnail: z.object({
     url: z.string(),

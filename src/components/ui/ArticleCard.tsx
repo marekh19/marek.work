@@ -7,6 +7,8 @@ import { getTimeAgo } from '@/lib/utils'
 import { type Post } from '@/sanity/queries/getAllPosts'
 import { type Project } from '@/sanity/queries/getAllProjects'
 
+import { Badge } from './Badge'
+
 type Props = {
   data: Post | Project
 }
@@ -27,6 +29,9 @@ export const ArticleCard: FC<Props> = ({ data }) => {
         className="transition duration-300 hover:scale-105"
       >
         <div className="relative w-full">
+          {_type === 'project' && data.work_in_progress && (
+            <Badge text="Work in progress" className="absolute left-2 top-2" />
+          )}
           <Image
             src={thumbnail.url}
             alt={thumbnail.alt}
