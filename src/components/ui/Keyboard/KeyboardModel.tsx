@@ -3,6 +3,7 @@
 import { useRef, type FC } from 'react'
 import { useFrame, useLoader } from '@react-three/fiber'
 import type { Mesh } from 'three'
+// @ts-expect-error not compatible with moduleResolution: Bundler
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 type Props = {
