@@ -1,16 +1,17 @@
 import { type ReactNode } from 'react'
 import { type Metadata } from 'next'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import '@/styles/globals.css'
 
 import { fontDisplay, fontSans } from '@/styles/fonts'
+import { env } from '@/env.mjs'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 
 import { Footer } from '@ui/Footer'
 import { Header } from '@ui/Header/Header'
 import { KeyboardCanvas } from '@ui/Keyboard/KeyboardCanvas'
-import { GoogleTagManager } from '@/components/GoogleTagManager'
 import { Providers } from '@/components/Providers'
 
 export const metadata: Metadata = {
@@ -62,7 +63,7 @@ export default function WebLayout({ children }: Props) {
           fontDisplay.variable
         )}
       >
-        <GoogleTagManager />
+        <GoogleTagManager gtmId={env.NEXT_PUBLIC_GOOGLE_GTM} />
         <Providers>
           <Header />
           <KeyboardCanvas />
