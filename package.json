@@ -7,8 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix \"./src/**/*.{js,ts,jsx,tsx}\"",
-    "format": "prettier --write \"./src/**/*\""
+    "lint": "eslint --fix \"./src/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write ./src/**/*.{js,ts,tsx,css}"
   },
   "dependencies": {
     "@next/third-parties": "^14.0.4",
@@ -62,3 +62,4 @@
     "typescript": "5.3.3"
   }
 }
+
