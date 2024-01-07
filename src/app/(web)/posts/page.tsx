@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
 
+import { siteConfig } from '@/config/site'
 import { getAllPosts } from '@/sanity/queries/getAllPosts'
 
 import { InnerLayout } from '@ui/InnerLayout'
@@ -8,6 +9,9 @@ import { ArticleCard } from '@/components/ui/ArticleCard'
 
 export const metadata: Metadata = {
   title: 'Blog',
+  alternates: {
+    canonical: `${siteConfig.baseUrl}/posts`,
+  },
 }
 
 export default async function PostsPage() {

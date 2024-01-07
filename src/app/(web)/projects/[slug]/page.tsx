@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
+import { siteConfig } from '@/config/site'
 import { getAllProjects } from '@/sanity/queries/getAllProjects'
 import { getProject } from '@/sanity/queries/getProject'
 
@@ -18,6 +19,9 @@ export async function generateMetadata({
 
   return {
     title: project?.title,
+    alternates: {
+      canonical: `${siteConfig.baseUrl}/projects/${slug}`,
+    },
   }
 }
 

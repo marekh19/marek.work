@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
+  alternates: {
+    canonical: siteConfig.baseUrl,
+  },
 }
 
 type Props = {
