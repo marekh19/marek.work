@@ -22,7 +22,7 @@ export const Work: FC<Props> = ({ data }) => {
       <Link href={ROUTES.projects}>
         <Button className="mx-auto mt-6 gap-x-2" accent="secondary">
           <span>My portfolio</span>
-          <ArrowRight className="h-5 w-5" />
+          <ArrowRight className="size-5" />
         </Button>
       </Link>
     </Section>

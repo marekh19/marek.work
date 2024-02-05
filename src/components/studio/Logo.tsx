@@ -8,7 +8,7 @@ export const Logo: FC = (props: any) => {
   const { title } = props
   return (
     <div className="flex items-center space-x-2 p-1">
-      <CodeBlock className="h-8 w-8 fill-current" />
+      <CodeBlock className="size-8 fill-current" />
       <span>{title}</span>
     </div>
   )

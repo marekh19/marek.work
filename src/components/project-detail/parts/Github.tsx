@@ -26,7 +26,7 @@ export const Github: FC<Props> = ({ link, className }) => {
         target="_blank"
         rel="noreferrer"
       >
-        <GithubLogo className="h-5 w-5" />
+        <GithubLogo className="size-5" />
         <span className="ml-1">{link.title}</span>
       </a>
     </div>

@@ -25,7 +25,7 @@ export const Introduction: FC<Props> = ({ data }) => (
         </h1>
         <h2 className="font-light text-primary sm:text-lg">{data.job}</h2>
       </div>
-      <div className="relative h-28 w-28 shrink-0">
+      <div className="relative size-28 shrink-0">
         <Image
           src={data.profile_picture.url}
           alt={data.profile_picture.alt}

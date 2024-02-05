@@ -16,7 +16,7 @@ export const Bio: FC<Props> = ({ data }) => {
       <ol className="relative space-y-6 border-l border-secondary">
         {data.map(timelineItem => (
           <li key={timelineItem._key} className="ml-4">
-            <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-primary"></div>
+            <div className="absolute -left-1.5 mt-1.5 size-3 rounded-full bg-primary"></div>
             <time className="mb-1 leading-none text-text/80">
               {timelineItem.year}
             </time>

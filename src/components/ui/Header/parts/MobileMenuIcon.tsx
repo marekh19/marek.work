@@ -16,12 +16,12 @@ export const MobileMenuIcon: FC<Props> = ({ className }) => {
     <div className={className}>
       {!isOpen && (
         <button aria-label="Open menu" title="Open menu" onClick={toggleMenu}>
-          <List className="h-7 w-7" />
+          <List className="size-7" />
         </button>
       )}
       {isOpen && (
         <button aria-label="Close menu" title="Close menu" onClick={toggleMenu}>
-          <X className="h-7 w-7" />
+          <X className="size-7" />
         </button>
       )}
     </div>

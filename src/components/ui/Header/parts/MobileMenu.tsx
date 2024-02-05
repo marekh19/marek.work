@@ -48,7 +48,7 @@ export const MobileMenu: FC<Props> = ({ className }) => {
                     'text-text': path === ROUTES.home,
                   })}
                 >
-                  <Cube className="h-6 w-6" />
+                  <Cube className="size-6" />
                   <span>Projects</span>
                 </Link>
                 <Link
@@ -59,7 +59,7 @@ export const MobileMenu: FC<Props> = ({ className }) => {
                     'text-text': path === ROUTES.home,
                   })}
                 >
-                  <Note className="h-6 w-6" />
+                  <Note className="size-6" />
                   <span>Posts</span>
                 </Link>
               </nav>

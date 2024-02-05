@@ -29,7 +29,7 @@ export const Header: FC<Props> = ({
         href={ROUTES.posts}
         className="flex items-center space-x-2 text-primary duration-300 ease-in-out hover:text-text"
       >
-        <CaretLeft className="h-4 w-4" />
+        <CaretLeft className="size-4" />
         <span>Posts</span>
       </Link>
       <div className="relative mt-6 w-full">

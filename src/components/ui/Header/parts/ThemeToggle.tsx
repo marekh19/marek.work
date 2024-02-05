@@ -28,7 +28,7 @@ export const ThemeToggle: FC<Props> = ({ isMobile, className }) => {
     return (
       <div className={className}>
         <Sun
-          className={cn('ml-2 h-6 w-6 text-gray-500', {
+          className={cn('ml-2 size-6 text-gray-500', {
             'h-9 w-9': isMobile,
           })}
         />
@@ -51,7 +51,7 @@ export const ThemeToggle: FC<Props> = ({ isMobile, className }) => {
         {isDarkTheme ? (
           <Sun
             className={cn(
-              'h-6 w-6 text-text transition duration-300 ease-in-out hover:text-yellow-500',
+              'size-6 text-text transition duration-300 ease-in-out hover:text-yellow-500',
               { 'h-9 w-9': isMobile }
             )}
             role="button"
@@ -61,7 +61,7 @@ export const ThemeToggle: FC<Props> = ({ isMobile, className }) => {
         ) : (
           <Moon
             className={cn(
-              'h-6 w-6 text-text transition duration-300 ease-in-out hover:text-yellow-500',
+              'size-6 text-text transition duration-300 ease-in-out hover:text-yellow-500',
               { 'h-9 w-9': isMobile }
             )}
             role="button"

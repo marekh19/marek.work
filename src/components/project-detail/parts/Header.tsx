@@ -20,7 +20,7 @@ export const Header: FC<Props> = ({ title, year, className }) => {
       >
         Projects
       </Link>
-      <CaretRight className="h-4 w-4" />
+      <CaretRight className="size-4" />
       <div className="flex items-center gap-x-2">
         <h1 className="text-xl font-medium sm:text-2xl">{title}</h1>
         <time className="rounded-lg bg-accent/50 px-1.5 py-1 text-xs font-bold">

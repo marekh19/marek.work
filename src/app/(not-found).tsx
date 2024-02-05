@@ -23,7 +23,7 @@ export default function NotFound() {
         <Link href={ROUTES.home}>
           <Button accent="secondary" className="gap-2">
             <span>GO</span>
-            <ArrowRight className="h-5 w-5" />
+            <ArrowRight className="size-5" />
           </Button>
         </Link>
       </div>
