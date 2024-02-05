@@ -1,7 +1,5 @@
 import { env } from '@/env.mjs'
 
-export type SiteConfig = typeof siteConfig
-
 export const siteConfig = {
   name: 'Marek Honzal',
   description:

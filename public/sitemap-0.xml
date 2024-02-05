@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://marek.work/opengraph-image.jpg</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work/posts</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work/projects</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work/projects/portfolio-web</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work/projects/tickerdex</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work/projects/zentodo</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work/projects/cutest-pokemon</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work/projects/guess-the-hex</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work/projects/servicenow-incidents</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marek.work/projects/jumpy-knight</loc><lastmod>2024-01-07T18:58:55.100Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/opengraph-image.jpg</loc><lastmod>2024-02-05T10:32:34.450Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/projects</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/posts</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/projects/portfolio-web</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/projects/tickerdex</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/projects/zentodo</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/projects/cutest-pokemon</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/projects/guess-the-hex</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/projects/servicenow-incidents</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marek.work/projects/jumpy-knight</loc><lastmod>2024-02-05T10:32:34.451Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
