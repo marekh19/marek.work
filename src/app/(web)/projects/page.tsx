@@ -1,6 +1,5 @@
 import { type Metadata } from 'next'
 
-import { siteConfig } from '@/config/site'
 import { getAllProjects } from '@/sanity/queries/getAllProjects'
 
 import { InnerLayout } from '@ui/InnerLayout'
@@ -10,7 +9,7 @@ import { ArticleCard } from '@/components/ui/ArticleCard'
 export const metadata: Metadata = {
   title: 'Portfolio',
   alternates: {
-    canonical: `${siteConfig.baseUrl}/projects`,
+    canonical: '/projects',
   },
 }
 

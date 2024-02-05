@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import { siteConfig } from '@/config/site'
 import { getAllPosts } from '@/sanity/queries/getAllPosts'
 import { getPost } from '@/sanity/queries/getPost'
 
@@ -19,7 +18,7 @@ export async function generateMetadata({
   return {
     title: post?.title,
     alternates: {
-      canonical: `${siteConfig.baseUrl}/posts/${slug}`,
+      canonical: `/posts/${slug}`,
     },
   }
 }

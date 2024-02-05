@@ -15,6 +15,7 @@ import { KeyboardCanvas } from '@ui/Keyboard/KeyboardCanvas'
 import { Providers } from '@/components/Providers'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.baseUrl),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   alternates: {
-    canonical: siteConfig.baseUrl,
+    canonical: '/',
   },
 }
 
