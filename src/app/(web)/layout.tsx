@@ -11,8 +11,8 @@ import { cn } from '@/lib/utils'
 
 import { Footer } from '@ui/Footer'
 import { Header } from '@ui/Header/Header'
-import { KeyboardCanvas } from '@ui/Keyboard/KeyboardCanvas'
 import { Providers } from '@/components/Providers'
+import { KeyboardContainer } from '@/components/ui/Keyboard/KeyboardContainer'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),
@@ -67,7 +67,7 @@ export default function WebLayout({ children }: Props) {
         <GoogleTagManager gtmId={env.NEXT_PUBLIC_GOOGLE_GTM} />
         <Providers>
           <Header />
-          <KeyboardCanvas />
+          <KeyboardContainer />
           <main className="w-full grow">{children}</main>
           <Footer />
         </Providers>
