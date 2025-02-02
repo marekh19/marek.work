@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
 
@@ -22,7 +21,6 @@ const KeyboardCanvas = dynamic(
 export const KeyboardContainer = () => {
   const path = usePathname()
   const isDetailPage = path.includes('projects/') || path.includes('posts/')
-  const [shouldRotate, setShouldRotate] = useState(true)
 
   if (isDetailPage) return null
 
@@ -33,10 +31,7 @@ export const KeyboardContainer = () => {
         'sm:h-[36rem] sm:px-8'
       )}
     >
-      <KeyboardCanvas
-        shouldRotate={shouldRotate}
-        setShouldRotate={setShouldRotate}
-      />
+      <KeyboardCanvas />
     </div>
   )
 }

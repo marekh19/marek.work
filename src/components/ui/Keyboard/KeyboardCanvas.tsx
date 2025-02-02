@@ -1,15 +1,12 @@
-import { type Dispatch, type SetStateAction } from 'react'
+import { useState, type Dispatch, type SetStateAction } from 'react'
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
 import { KeyboardModel } from './KeyboardModel'
 
-type Props = {
-  shouldRotate: boolean
-  setShouldRotate: Dispatch<SetStateAction<boolean>>
-}
+export const KeyboardCanvas = () => {
+  const [shouldRotate, setShouldRotate] = useState(true)
 
-export const KeyboardCanvas = ({ shouldRotate, setShouldRotate }: Props) => {
   return (
     <Canvas
       className="size-full"
