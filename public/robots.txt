@@ -1,9 +1,2 @@
-# *
 User-agent: *
-Allow: /
-
-# Host
-Host: https://marek.work
-
-# Sitemaps
-Sitemap: https://marek.work/sitemap.xml
+Disallow: /
